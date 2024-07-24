@@ -1,0 +1,61 @@
+@use "../partials/mixins" as *;
+@use '../partials/variables' as *;
+@use '../partials/typography' as *;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $primary-dark-text;
+    text-decoration: none;
+
+    &__title{
+        @include page-header;
+    }
+
+    &__btns{}
+
+    &_bio-btn{}
+    &__shows-btn{}
+
+}
+
+
+.hero{}
+
+.hero__title{}
+
+.hero__img{}
+
+
+.introduction{
+
+}
+
+.introduction__title{}
+
+.introduction__img{}
+
+.introduction__content{}
+
+.introduction__text{}
+
+
+.about{}
+
+.about__title{}
+
+.about__content{}
+
+
+.gallery{}
+
+.gallery__title{}
+
+.gallery__imgs{}

@@ -1,8 +1,5 @@
 @use "./partials/mixins" as *;
-@use './partials/mixins';
+@use './partials/variables' as *;
+@use './partials/typography' as *;
+@use './partials/global' as *;
 
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
