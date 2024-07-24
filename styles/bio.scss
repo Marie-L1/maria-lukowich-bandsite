@@ -14,16 +14,16 @@
     color: $primary-light-text;
     @include flex-center;
     @include flex-column;
-    @include section-header-mobile
+    // @include section-header;
 
     &__title{
-        z-index: 1;
-        align-self: center;
-        justify-content: center;
+        padding: 1.25rem;
+        font-size: 50px;
+        @include section-header;
 
     }
     @include mobile {
-        @include page-header-mobile;
+        @include page-header;
     }
 }
 
