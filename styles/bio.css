@@ -1,17 +1,17 @@
 @font-face {
-  font-family: "avenir-next-normal";
+  font-family: "Avenir Next Regular";
   src: url("/assets/font/AvenirNextLTPro-Regular.otf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "avenir-next-bold";
+  font-family: "Avenir Next Bold";
   src: url("/assets/font/AvenirNextLTPro-Bold.otf");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: "avenir-next-demi";
+  font-family: "Avenir Next Demi";
   src: url("/assets/font/AvenirNextLTPro-Demi.otf");
   font-weight: bold;
   font-style: normal;
@@ -33,6 +33,7 @@
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
+  font-family: "Avenir Next Bold";
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .navigation__title {
