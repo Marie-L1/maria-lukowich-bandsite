@@ -25,14 +25,22 @@
         text-decoration: none;
     }
 
-    &__bio-btn{
-    }
-    &__shows-btn{
-
-    }
-
     @include mobile{
+        @include mobile_padding;
+
+
+        &__bio-btn{
+        }
+        &__shows-btn{
+    
+        }
+        
     }
 
+}
 
+
+.footer{
+    background-color: $primary-dark-text;
+    color: $primary-light-text;
 }
