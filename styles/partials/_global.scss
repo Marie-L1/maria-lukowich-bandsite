@@ -47,7 +47,7 @@ html, body {
             position: relative;
             padding-bottom: 18px;
 
-            &.active::after {
+            &.active::after { 
                 content: "";
                 position: absolute;
                 bottom: 0; 
@@ -65,8 +65,56 @@ html, body {
         }
     }
 
-    @include tablet{}
+    @include tablet{
+        @include flex-row;
+        @include tablet-padding;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+    
+        &__icon{
+            width: 20%;
+            margin-bottom: 0;
+        }
+    
+        &__btns{
+            @include subheader;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: $white;
+            list-style: none;
+            margin: 0;
+            width: 40%;
+            position: relative;
+    
+    
+            a {
+                color: $white;
+                text-decoration: none;
+                list-style: none;
+                position: relative;
+                padding-bottom: 35px;
 
+                &.active::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0; 
+                    left: 50%;
+                    width: 100%; /* Adjust this value to make the border longer */
+                    height: 4px;
+                    background-color: $white;
+                    transform: translateX(-50%); /* Center the border horizontally */
+                    transition: background-color 0.6s ease-in-out;
+                }
+    
+                &.inactive{
+                    font-weight: 400;
+                }
+        }
+    }
+
+    }
     @include desktop {}
 
 }

@@ -112,7 +112,7 @@
     line-height: 1.25rem;
     font-weight: 700;
     font-family: "Avenir Next Bold";
-    
+
     @include tablet {
         font-size: .75rem;
         line-height: 1.25rem;
@@ -144,4 +144,8 @@
 
 @mixin mobile_padding{
     padding: 24px 16px 16px 16px;
+}
+
+@mixin tablet-padding {
+    padding: 48px 36px 36px 36px;
 }
