@@ -45,7 +45,7 @@
   color: #FFFFFF;
   list-style: none;
   padding: 0;
-  gap: 7rem;
+  gap: 6.8rem;
 }
 @media (max-width: 767px) {
   .navigation__btns {
