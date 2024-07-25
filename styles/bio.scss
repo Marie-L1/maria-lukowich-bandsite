@@ -30,7 +30,9 @@
     @include flex-column;
 
     &__title{
-        @include section-header;
+        @include page-header;
+        padding-left: 20px;
+        font-size: 60px;
     }
     &__img{
         padding: 16px;

@@ -19,13 +19,19 @@
         @include page-header;
     }
 
-    &__btns{}
+    &__btns{
+        @include labels-btns;
+        color: $primary-light-text;
+        text-decoration: none;
+    }
 
-    &_bio-btn{}
-    &__shows-btn{}
+    &__bio-btn{
+    }
+    &__shows-btn{
+
+    }
 
     @include mobile{
-        @include page-header;
     }
 
 
