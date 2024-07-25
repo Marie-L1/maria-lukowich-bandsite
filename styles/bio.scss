@@ -14,11 +14,10 @@
     color: $primary-light-text;
     @include flex-center;
     @include flex-column;
-    @include section-header;
 
     &__title{
         padding: 1.25rem;
-
+        @include page-header;
     }
     @include mobile {
         
@@ -26,31 +25,51 @@
 }
 
 .introduction{
-    width: 100%;
-    @include flex-column;
+//     width: 100%;
+//     @include flex-column;
 
-    &__title{
-        @include page-header;
-        padding-left: 20px;
-        font-size: 60px;
-    }
-    &__img{
-        padding: 16px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+//     &__title{
+//         @include page-header;
+//         padding-left: 20px;
+//     }
+//     &__img{
+//         padding: 16px;
+//         width: 100%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
 
-    }
-    &__content{
-
-    }
-    &_text{
-
-
-    }
+//     }
+//     &__content{
+//         @include section-header;
+//         margin-left: 10px;
+// } 
+//     &--quote-author{
+//         margin: 20px 20px 0 0;
+//     }
     @include mobile {
-        padding: 24px 16px 16px 16px;
+        @include mobile_padding;
+        width: 100%;
+        @include flex-column;
+    
+        &__title{
+            @include page-header;
+            padding-bottom: 1.25rem;
+        }
+        &__img{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+        }
+        &__content{
+            @include section-header;
+            margin-left: 10px;
+    } 
+        &--quote-author{
+            margin: 25px 20px 0 0;
+        }
     }
     @include tablet{
 
@@ -64,15 +83,25 @@
 
 
 .about{
+    // @include mobile_padding;
 
-    &__title{
-    
-    }
-    &__content{
-
-    }
+    // &__title{
+    //     @include subheader;
+    //     padding-bottom: 20px;
+    // }
+    // &__content{
+    //     @include body;
+    // }
     @include mobile{
+        @include mobile_padding;
 
+        &__title{
+            @include subheader;
+            padding-bottom: 20px;
+        }
+        &__content{
+            @include body;
+        }
     }
     @include tablet{
 
@@ -87,12 +116,18 @@
 .gallery{
     width: 100%;
     @include flex-column;
+    background-color: $alt-background;
+    
 
     &__title{
+        @include page-header;
+        padding: 16px 0;
+
 
     }
     &__imgs{
         width: 100%;
+        padding: 10px 0;
     }
 
     @include mobile {

@@ -167,3 +167,7 @@
     display: flex;
     flex-direction: column;
 }
+
+@mixin mobile_padding{
+    padding: 24px 16px 16px 16px;
+}
