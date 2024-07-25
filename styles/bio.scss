@@ -14,16 +14,14 @@
     color: $primary-light-text;
     @include flex-center;
     @include flex-column;
-    // @include section-header;
+    @include section-header;
 
     &__title{
         padding: 1.25rem;
-        font-size: 50px;
-        @include section-header;
 
     }
     @include mobile {
-        @include page-header;
+        
     }
 }
 
