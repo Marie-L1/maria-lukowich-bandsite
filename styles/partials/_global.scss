@@ -11,29 +11,34 @@
 .navigation{
     @include flex-column;
     @include flex-center;
-    background-color: $primary-dark-text;
-    color: $primary-light-text;
+    background-color: $bandSite-black;
+    color: $white;
     text-decoration: none;
 
-    &__title{
-        @include page-header;
+    &__icon{
+        // width: 40%;
+        margin-bottom: 1rem;
     }
 
     &__btns{
         @include labels-btns;
-        color: $primary-light-text;
-        text-decoration: none;
+        @include flex-row;
+        color: $white;
+        list-style: none;
+        padding: 0;
+        gap: 7rem;
+
+
+        a {
+            color: $white;
+            text-decoration: none;
+            list-style: none;
+        }
     }
 
     @include mobile{
         @include mobile_padding;
 
-
-        &__bio-btn{
-        }
-        &__shows-btn{
-    
-        }
         
     }
 
@@ -41,6 +46,102 @@
 
 
 .footer{
-    background-color: $primary-dark-text;
-    color: $primary-light-text;
+    background-color: $bandSite-black;
+    color: $white;
+
+
+    @include mobile{
+        @include mobile_padding;
+        @include flex-column;
+
+
+        .in-touch{
+            margin-bottom: 1rem;
+            
+
+            &__title{
+                @include section-header;
+                margin-bottom: 1rem;
+            }
+            &__media-icons{
+                display: flex;
+                gap: 40px;
+                width: 50px;
+            }
+        }
+    
+        .management{
+            margin-bottom: 1rem;
+    
+            &__title{
+                @include subheader;
+                margin-bottom: 1rem;
+            }
+    
+            &__address{
+                @include body;
+                margin-bottom: 1rem;
+            }
+    
+            &__email{
+                @include body;
+            }
+        }
+    
+        .artist-group{
+            margin-bottom: 1rem;
+    
+            &__title{
+                @include subheader;
+                margin-bottom: 1rem;
+            }
+    
+            &__booking{
+                @include body;
+                margin-bottom: 1rem;
+            }
+    
+            &__email{
+                @include body;
+            }
+        }
+    
+        .arch-entertainment{
+            margin-bottom: 1rem;
+
+            &__title{
+                @include subheader;
+                margin-bottom: 1rem;
+            }
+    
+            &__booking{
+                @include body;
+                margin-bottom: 1rem;
+            }
+    
+            &__email{
+                @include body;
+                margin-bottom: 1rem;
+            }
+    
+        }
+
+        .footer-logo{
+            margin-bottom: 1rem;
+
+            &__title-mobile{
+                @include page-header;
+                margin-bottom: 1rem;
+            }
+
+            &__copyright{
+                @include body;
+            }
+
+            &__title--tablet{
+                display: none;
+            }
+        }
+
+    }
 }
