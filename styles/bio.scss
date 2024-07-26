@@ -95,13 +95,14 @@
             @include subheader;
             margin-left: 50px;
             margin-right: 10px;
-    } 
-        &--quote-author{
-            @include body;
-            margin: 35px 20px 0 0;
-        }
-    
+
+            &--quote-author{
+                @include body;
+                margin: 35px 20px 0 0;
+            }
+        } 
     }
+
     @include desktop{
         @include tablet_padding;
         width: 100%;
@@ -111,24 +112,27 @@
         &__title{
             @include section-header;
             padding-bottom: 1.25rem;
+            margin-left: 50px;
+            margin-bottom: 30px;
         }
         &__img{
-            width: 80%;
+            width: 85%;
             height: 20%;
             @include flex-center;
             margin-bottom: 20px;
-            margin-left: 50px;
+            margin-left: 100px;
             flex-wrap: wrap;
     
         }
         &__content{
             @include subheader;
             margin-left: 100px;
-            margin-right: 10px;
-    } 
-        &--quote-author{
-            @include body;
-            margin: 55px 20px 0 0;
+            margin-right: 400px;
+
+            &--quote-author{
+                @include body;
+                margin-top: 70px;
+            }
         }
     
     }
@@ -176,6 +180,29 @@
         }
     }
     @include desktop{
+        @include tablet_padding;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        &__title{
+            @include subheader;
+            padding-bottom: 20px;
+            margin-left: 100px;
+            width: 100%;
+        }
+        &__content{
+            @include body;
+            display: flex;
+            flex-direction: row;
+            margin-left: 80px;
+            margin-right: 80px;
+
+            &-item {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
         
     }
 }

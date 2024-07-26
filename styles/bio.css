@@ -1017,7 +1017,7 @@ html, body {
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .about--quote-author {
+  .about__content--quote-author {
     font-size: 0.8125rem;
     line-height: 1.125rem;
     font-weight: 400;
@@ -1026,14 +1026,14 @@ html, body {
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) and (min-width: 768px) and (max-width: 1279px) {
-  .about--quote-author {
+  .about__content--quote-author {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 400;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) and (min-width: 1280px) {
-  .about--quote-author {
+  .about__content--quote-author {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 400;
@@ -1053,6 +1053,8 @@ html, body {
     font-weight: 400;
     font-family: "Avenir Next Demi";
     padding-bottom: 1.25rem;
+    margin-left: 50px;
+    margin-bottom: 30px;
   }
 }
 @media (min-width: 1280px) and (min-width: 768px) and (max-width: 1279px) {
@@ -1071,13 +1073,13 @@ html, body {
 }
 @media (min-width: 1280px) {
   .about__img {
-    width: 80%;
+    width: 85%;
     height: 20%;
     display: flex;
     align-content: center;
     justify-content: center;
     margin-bottom: 20px;
-    margin-left: 50px;
+    margin-left: 100px;
     flex-wrap: wrap;
   }
   .about__content {
@@ -1086,7 +1088,7 @@ html, body {
     font-weight: 600;
     font-family: "Avenir Next Demi";
     margin-left: 100px;
-    margin-right: 10px;
+    margin-right: 400px;
   }
 }
 @media (min-width: 1280px) and (min-width: 768px) and (max-width: 1279px) {
@@ -1104,23 +1106,23 @@ html, body {
   }
 }
 @media (min-width: 1280px) {
-  .about--quote-author {
+  .about__content--quote-author {
     font-size: 0.8125rem;
     line-height: 1.125rem;
     font-weight: 400;
     font-family: "Avenir Next Regular";
-    margin: 55px 20px 0 0;
+    margin-top: 70px;
   }
 }
 @media (min-width: 1280px) and (min-width: 768px) and (max-width: 1279px) {
-  .about--quote-author {
+  .about__content--quote-author {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 400;
   }
 }
 @media (min-width: 1280px) and (min-width: 1280px) {
-  .about--quote-author {
+  .about__content--quote-author {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 400;
@@ -1234,6 +1236,70 @@ html, body {
     margin-right: 20px;
   }
 }
+@media (min-width: 1280px) {
+  .information {
+    padding: 48px 36px 36px 36px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .information__title {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    font-family: "Avenir Next Demi";
+    padding-bottom: 20px;
+    margin-left: 100px;
+    width: 100%;
+  }
+}
+@media (min-width: 1280px) and (min-width: 768px) and (max-width: 1279px) {
+  .information__title {
+    font-size: 1.5rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+  }
+}
+@media (min-width: 1280px) and (min-width: 1280px) {
+  .information__title {
+    font-size: 1.5rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+  }
+}
+@media (min-width: 1280px) {
+  .information__content {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    font-family: "Avenir Next Regular";
+    display: flex;
+    flex-direction: row;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+}
+@media (min-width: 1280px) and (min-width: 768px) and (max-width: 1279px) {
+  .information__content {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1280px) and (min-width: 1280px) {
+  .information__content {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1280px) {
+  .information__content-item {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
 .gallery {
   width: 100%;
   display: flex;
