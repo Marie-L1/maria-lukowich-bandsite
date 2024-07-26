@@ -23,17 +23,17 @@
 @mixin page-header {
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 700;
+    font-weight: 600;
     font-family: "Avenir Next Bold";
     @include tablet {
         font-size: 3.75rem;
         line-height: 4.25rem;
-        font-weight: 700;
+        font-weight: 600;
     }
     @include desktop {
         font-size: 3.75rem;
         line-height: 4.25rem;
-        font-weight: 700;
+        font-weight: 600;
     }
 }
 

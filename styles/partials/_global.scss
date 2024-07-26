@@ -73,37 +73,29 @@ html, body {
         justify-content: flex-start;
     
         &__icon{
-            width: 20%;
+            width: 15%;
             margin-bottom: 0;
         }
     
         &__btns{
-            @include subheader;
+            @include body;
+            width: 40%;
+            margin: 0;
+            padding-bottom: 0;
             display: flex;
             justify-content: space-around;
-            align-items: center;
-            color: $white;
-            list-style: none;
-            margin: 0;
-            width: 40%;
-            position: relative;
-    
     
             a {
-                color: $white;
-                text-decoration: none;
-                list-style: none;
                 position: relative;
-                padding-bottom: 35px;
+                padding-bottom: 40px;
 
                 &.active::after {
                     content: "";
                     position: absolute;
                     bottom: 0; 
                     left: 50%;
-                    width: 100%; /* Adjust this value to make the border longer */
+                    width: 100%;
                     height: 4px;
-                    background-color: $white;
                     transform: translateX(-50%); /* Center the border horizontally */
                     transition: background-color 0.6s ease-in-out;
                 }
@@ -115,7 +107,48 @@ html, body {
     }
 
     }
-    @include desktop {}
+
+    @include desktop {
+        @include flex-row;
+        padding: 30px 80px;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+    
+        &__icon{
+            width: 7%;
+            margin-bottom: 0;
+        }
+    
+        &__btns{
+            @include body;
+            width: 20%;
+            margin: 0;
+            padding-bottom: 0;
+            display: flex;
+            justify-content: space-around;
+    
+            a {
+                position: relative;
+                padding-bottom: 32px;
+
+                &.active::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0; 
+                    left: 50%;
+                    width: 80%;
+                    height: 2px;
+                    transform: translateX(-50%); /* Center the border horizontally */
+                    transition: background-color 0.6s ease-in-out;
+                }
+    
+                &.inactive{
+                    font-weight: 400;
+                }
+        }
+    }
+    }
 
 }
 
@@ -214,7 +247,104 @@ html, body {
             display: none;
         }
     }
-    @include tablet{}
+
+
+    @include tablet{
+        background-color: $bandSite-black;
+        color: $white;
+        @include tablet_padding;
+        @include flex-row;
+
+
+    .in-touch{
+        margin-bottom: 1rem;
+        
+
+        &__title{
+            @include section-header;
+            margin-bottom: 1rem;
+            @include flex-row;
+        }
+        &__media-icons{
+            display: flex;
+            gap: 40px;
+            width: 50px;
+        }
+    }
+
+    .management{
+        margin-bottom: 1rem;
+
+        &__title{
+            @include body;
+            margin-bottom: 1rem;
+        }
+
+        &__address{
+            @include body;
+            margin-bottom: 1rem;
+        }
+
+        &__email{
+            @include body;
+        }
+    }
+
+    .artist-group{
+        margin-bottom: 1rem;
+
+        &__title{
+            @include body;
+            margin-bottom: 1rem;
+        }
+
+        &__booking{
+            @include body;
+            margin-bottom: 1rem;
+        }
+
+        &__email{
+            @include body;
+        }
+    }
+
+    .arch-entertainment{
+        margin-bottom: 1rem;
+        @include flex-column;
+        &__title{
+            @include body;
+            margin-bottom: 1rem;
+        }
+
+        &__booking{
+            @include body;
+            margin-bottom: 1rem;
+        }
+
+        &__email{
+            @include body;
+            margin-bottom: 1rem;
+        }
+
+    }
+
+    .footer-logo{
+        margin-bottom: 1rem;
+
+        &__title-mobile{
+            @include page-header;
+            margin-bottom: 1rem;
+        }
+
+        &__copyright{
+            @include body;
+        }
+
+        &__title--tablet{
+            display: none;
+        }
+    }
+    }
 
     @include desktop {}
 

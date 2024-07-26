@@ -13,17 +13,39 @@
     height: 35vh;
     background-position: fixed;
     color: $white;
-    @include flex-center;
-    @include flex-column;
+    // @include flex-center;
 
     &__title{
         padding: 1.25rem;
         @include page-header;
     }
+
     @include tablet {
-        
+        width: 100%;
+        height: 70vh;
+        background-position: fixed;
+        @include flex-center;
+        @include flex-column;
+        // margin-left: 10x;
+    
+        &__title{
+            padding: 1.25rem;
+            @include page-header;
+        }
     }
-    @include desktop{}
+    @include desktop{
+        width: 100%;
+        height: 90vh;
+        background-position: fixed;
+        @include flex-center;
+        @include flex-column;
+        // margin-left: 10x;
+    
+        &__title{
+            padding: 1.25rem;
+            @include page-header;
+        }
+    }
 }
 
 .about{
@@ -50,13 +72,68 @@
     &--quote-author{
         margin: 25px 20px 0 0;
     }
-}
-@include tablet{
 
-}
-@include desktop{
+    @include tablet{
+        @include tablet_padding;
+        width: 100%;
+        height: 90%;
+        @include flex-column;
+    
+        &__title{
+            @include section-header;
+            padding-bottom: 1.25rem;
+        }
+        &__img{
+            width: 90%;
+            @include flex-center;
+            margin-bottom: 20px;
+            margin-left: 50px;
+            flex-wrap: wrap;
+    
+        }
+        &__content{
+            @include subheader;
+            margin-left: 50px;
+            margin-right: 10px;
+    } 
+        &--quote-author{
+            @include body;
+            margin: 35px 20px 0 0;
+        }
+    
+    }
+    @include desktop{
+        @include tablet_padding;
+        width: 100%;
+        height: 100%;
+        @include flex-column;
+    
+        &__title{
+            @include section-header;
+            padding-bottom: 1.25rem;
+        }
+        &__img{
+            width: 80%;
+            height: 20%;
+            @include flex-center;
+            margin-bottom: 20px;
+            margin-left: 50px;
+            flex-wrap: wrap;
+    
+        }
+        &__content{
+            @include subheader;
+            margin-left: 100px;
+            margin-right: 10px;
+    } 
+        &--quote-author{
+            @include body;
+            margin: 55px 20px 0 0;
+        }
+    
+    }
+    }
 
-}
 
 
 
@@ -72,8 +149,31 @@
     &__content{
         @include body;
     }
-    @include tablet{
 
+    @include tablet{
+        @include tablet_padding;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        &__title{
+            @include subheader;
+            padding-bottom: 20px;
+            margin-left: 40px;
+            width: 100%;
+        }
+        &__content{
+            @include body;
+            display: flex;
+            flex-direction: row;
+            margin-left: 20px;
+            margin-right: 20px;
+
+            &-item {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
     }
     @include desktop{
         
@@ -99,8 +199,25 @@
         width: 100%;
         padding: 10px 0;
     }
-    @include tablet{
 
+    @include tablet{
+        width: 100%;
+        @include flex-column;
+        background-color: $alabaster;
+        @include tablet_padding;
+        justify-content: center;
+        
+    
+        &__title{
+            width: 100%;
+            @include section-header;
+            padding: 10px;
+        }
+        &__imgs{
+            width: 29%;
+            padding: 10px 10px;
+            flex-wrap: wrap;
+        }
     }
     @include desktop{
         
