@@ -1073,13 +1073,13 @@ html, body {
 }
 @media (min-width: 1280px) {
   .about__img {
-    width: 85%;
+    width: 80%;
     height: 20%;
     display: flex;
     align-content: center;
     justify-content: center;
     margin-bottom: 20px;
-    margin-left: 100px;
+    margin-left: 130px;
     flex-wrap: wrap;
   }
   .about__content {
@@ -1087,7 +1087,7 @@ html, body {
     line-height: 1.375rem;
     font-weight: 600;
     font-family: "Avenir Next Demi";
-    margin-left: 100px;
+    margin-left: 130px;
     margin-right: 400px;
   }
 }
@@ -1249,7 +1249,7 @@ html, body {
     font-weight: 600;
     font-family: "Avenir Next Demi";
     padding-bottom: 20px;
-    margin-left: 100px;
+    margin-left: 125px;
     width: 100%;
   }
 }
@@ -1295,8 +1295,8 @@ html, body {
 }
 @media (min-width: 1280px) {
   .information__content-item {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 }
 
@@ -1365,6 +1365,59 @@ html, body {
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
+  .gallery__img-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .gallery__imgs {
+    width: 29%;
+    padding: 10px 10px;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1280px) {
+  .gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    padding: 48px 36px 36px 36px;
+    justify-content: center;
+  }
+  .gallery__title {
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+    font-family: "Avenir Next Demi";
+    padding: 10px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 1280px) and (min-width: 768px) and (max-width: 1279px) {
+  .gallery__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1280px) and (min-width: 1280px) {
+  .gallery__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1280px) {
+  .gallery__img-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
   .gallery__imgs {
     width: 29%;
     padding: 10px 10px;
