@@ -123,21 +123,37 @@ html, body {
     // mobile view
     background-color: $bandSite-black;
     color: $mercury;
-    @include mobile-padding;
     @include flex-column;
+    padding: 2.5rem 0 0 2.1875rem;
 
-    .in-touch{
-        &__title{
-            @include page-header;
-            margin-bottom: 1.2rem;
-        }
-        &__media-icons{
-            display: flex;
-            gap: 2.5rem;
-            width: 3.125rem;
-            margin-bottom: 1.5rem;
+    &__top{
+        .in-touch{
+            &__title{
+                @include page-header;
+                margin-bottom: 1.2rem;
+            }
+            &__media-icons{
+                display: flex;
+                gap: 2.5rem;
+                width: 3.125rem;
+                margin-bottom: 1.5rem;
+            }
         }
     }
+    &__title-mobile{
+        display: block;
+        width: 30%;
+        margin: 1.875rem 0 .625rem 0;
+    }
+    &__title-tablet{
+        display: none;
+        margin-bottom: 1.875rem;
+    }
+    &__copyright{
+        @include body;
+        margin-bottom: 1.875rem;
+    }
+
     .management, .artist-group, .arch-entertainment{
         margin-bottom: 1rem;
         &__title{
@@ -151,22 +167,9 @@ html, body {
             margin-top: 1rem;
         }
     }
-    .footer-logo{
-        margin-bottom: 1rem;
-
-        &__title-mobile{
-            margin: 1.875rem 0 .625rem 0;
-        }
-        &__copyright{
-            @include body;
-        }
-        &__title-tablet{
-            display: none;
-        }
-    }
     // tablet view
     @include tablet{
-        @include tablet_padding;
+        @include tablet-padding;
 
         &__top{
             @include flex-row;
@@ -190,6 +193,18 @@ html, body {
             justify-content: space-between;
             width: 100%;
         }
+        &__title-mobile{
+            display: none;
+        }
+        &__title-tablet{
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+        &__copyright{
+            @include body;
+            margin-top: 1.875rem;
+        }
+
         .management, .artist-group, .arch-entertainment{
 
             &__title{
@@ -197,22 +212,10 @@ html, body {
             }
         }
     }
-    .footer-logo{
-
-        &__title-mobile{
-            display: none;
-        }
-        &__title-tablet{
-            margin-bottom: 0.8rem;
-            display: flex;
-        }
-        &__copyright{
-            margin-top: 1.875rem;
-        }
-    }
+    
     // desktop view
     @include desktop {
-        @include tablet_padding;
+        @include tablet-padding;
 
         &__top{
             @include flex-row;
@@ -240,6 +243,18 @@ html, body {
             margin-left: 3.75rem;
             width: 100%;
         }
+        &__title-mobile{
+            display: none;
+        }
+        &__title-tablet{
+            width: 8%;
+            margin: 0 3.75rem 0.8rem 0;
+            display: block;
+        }
+        &__copyright{
+            @include body;
+            margin: 2rem 0 1rem 3.125rem;
+        }
         .management, .artist-group, .arch-entertainment{
 
             &__title{
@@ -251,11 +266,6 @@ html, body {
 
         &__title-mobile{
             display: none;
-        }
-        &__title-tablet{
-            width: 8%;
-            margin: 0 3.75rem 0.8rem 0;
-            display: flex;
         }
         &__copyright{
             margin: 1.875rem 0 0 3.75rem;
