@@ -52,16 +52,15 @@ html, body {
                 position: absolute;
                 bottom: 0; 
                 left: 50%;
-                width: 350%; /* Adjust this value to make the border longer */
+                width: 450%; /* Adjust this value to make the border longer */
                 height: 3px;
                 background-color: $white;
                 transform: translateX(-60%); /* Center the border horizontally */
                 transition: background-color 0.6s ease-in-out;
             }
-
-            &.inactive{
-                font-weight: 400;
-            }
+        }
+        .inactive{
+            color: $sliver;
         }
     }
 
@@ -99,12 +98,12 @@ html, body {
                     transform: translateX(-50%); /* Center the border horizontally */
                     transition: background-color 0.6s ease-in-out;
                 }
-    
-                &.inactive{
-                    font-weight: 400;
-                }
+            }
+            .inactive{
+                color: $sliver;
+                margin-left: -100px;
+            }
         }
-    }
 
     }
 
@@ -137,16 +136,16 @@ html, body {
                     position: absolute;
                     bottom: 0; 
                     left: 50%;
-                    width: 80%;
+                    width: 100%;
                     height: 2px;
                     transform: translateX(-50%); /* Center the border horizontally */
                     transition: background-color 0.6s ease-in-out;
                 }
-    
-                &.inactive{
-                    font-weight: 400;
-                }
-        }
+            }
+            .inactive{
+                color: $sliver;
+                margin-left: -50px;
+            }
     }
     }
 
@@ -154,16 +153,15 @@ html, body {
 
 
 .footer{
+    // mobile view
     background-color: $bandSite-black;
     color: $white;
     @include mobile_padding;
     @include flex-column;
 
-
     .in-touch{
         margin-bottom: 1rem;
-        
-
+    
         &__title{
             @include section-header;
             margin-bottom: 1rem;
@@ -175,7 +173,7 @@ html, body {
         }
     }
 
-    .management{
+    .management, .artist-group, .arch-entertainment{
         margin-bottom: 1rem;
 
         &__title{
@@ -187,48 +185,14 @@ html, body {
             @include body;
             margin-bottom: 1rem;
         }
-
-        &__email{
-            @include body;
-        }
-    }
-
-    .artist-group{
-        margin-bottom: 1rem;
-
-        &__title{
-            @include subheader;
-            margin-bottom: 1rem;
-        }
-
         &__booking{
-            @include body;
-            margin-bottom: 1rem;
+                    @include body;
+                    margin-bottom: 1rem;
         }
-
         &__email{
             @include body;
+            scroll-margin-top: 1rem;
         }
-    }
-
-    .arch-entertainment{
-        margin-bottom: 1rem;
-
-        &__title{
-            @include subheader;
-            margin-bottom: 1rem;
-        }
-
-        &__booking{
-            @include body;
-            margin-bottom: 1rem;
-        }
-
-        &__email{
-            @include body;
-            margin-bottom: 1rem;
-        }
-
     }
 
     .footer-logo{
@@ -247,14 +211,18 @@ html, body {
             display: none;
         }
     }
-
-
+    // tablet view
     @include tablet{
         background-color: $bandSite-black;
         color: $white;
         @include tablet_padding;
         @include flex-row;
 
+        &__top {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
 
     .in-touch{
         margin-bottom: 1rem;
@@ -271,8 +239,7 @@ html, body {
             width: 50px;
         }
     }
-
-    .management{
+    .management, .artist-group, .arch-entertainment{
         margin-bottom: 1rem;
 
         &__title{
@@ -288,44 +255,6 @@ html, body {
         &__email{
             @include body;
         }
-    }
-
-    .artist-group{
-        margin-bottom: 1rem;
-
-        &__title{
-            @include body;
-            margin-bottom: 1rem;
-        }
-
-        &__booking{
-            @include body;
-            margin-bottom: 1rem;
-        }
-
-        &__email{
-            @include body;
-        }
-    }
-
-    .arch-entertainment{
-        margin-bottom: 1rem;
-        @include flex-column;
-        &__title{
-            @include body;
-            margin-bottom: 1rem;
-        }
-
-        &__booking{
-            @include body;
-            margin-bottom: 1rem;
-        }
-
-        &__email{
-            @include body;
-            margin-bottom: 1rem;
-        }
-
     }
 
     .footer-logo{
@@ -345,8 +274,10 @@ html, body {
         }
     }
     }
+    // desktop view
+    @include desktop {
 
-    @include desktop {}
+    }
 
 }
 
