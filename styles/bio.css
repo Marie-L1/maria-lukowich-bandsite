@@ -426,7 +426,7 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    gap: 50px;
+    gap: 3.125rem;
     margin-left: 3.75rem;
     width: 100%;
   }
@@ -457,12 +457,11 @@ html, body {
 }
 .footer .footer-logo__title-tablet {
   width: 8%;
-  margin-right: 60px;
-  margin-bottom: 0.8rem;
+  margin: 0 3.75rem 0.8rem 0;
   display: flex;
 }
 .footer .footer-logo__copyright {
-  margin-top: 1.875rem;
+  margin: 1.875rem 0 0 3.75rem;
 }
 
 .hero {
