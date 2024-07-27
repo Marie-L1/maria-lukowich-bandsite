@@ -41,7 +41,7 @@ html, body {
   position: relative;
 }
 .navigation__icon {
-  width: 40%;
+  width: 100%;
   margin-bottom: 1rem;
 }
 .navigation__btns {
@@ -101,7 +101,7 @@ html, body {
     justify-content: flex-start;
   }
   .navigation__icon {
-    width: 15%;
+    width: 130%;
     margin-bottom: 0;
   }
   .navigation__btns {
@@ -149,7 +149,7 @@ html, body {
     justify-content: flex-start;
   }
   .navigation__icon {
-    width: 7%;
+    width: 110%;
     margin-bottom: 0;
   }
   .navigation__btns {
