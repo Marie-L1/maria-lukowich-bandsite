@@ -62,14 +62,12 @@ html, body {
   .navigation__btns {
     font-size: 1.5rem;
     line-height: 1.375rem;
-    font-weight: 600;
   }
 }
 @media (min-width: 1280px) {
   .navigation__btns {
     font-size: 1.5rem;
     line-height: 1.375rem;
-    font-weight: 600;
   }
 }
 .navigation__btns a {
@@ -117,14 +115,12 @@ html, body {
   .navigation__btns {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) and (min-width: 1280px) {
   .navigation__btns {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -164,14 +160,12 @@ html, body {
   .navigation__btns {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 1280px) and (min-width: 1280px) {
   .navigation__btns {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 1280px) {
@@ -206,14 +200,12 @@ html, body {
   .footer .in-touch__title {
     font-size: 3.75rem;
     line-height: 4.25rem;
-    font-weight: 600;
   }
 }
 @media (min-width: 1280px) {
   .footer .in-touch__title {
     font-size: 3.75rem;
     line-height: 4.25rem;
-    font-weight: 600;
   }
 }
 .footer .in-touch__media-icons {
@@ -236,14 +228,12 @@ html, body {
   .footer .management__title, .footer .artist-group__title, .footer .arch-entertainment__title {
     font-size: 1.5rem;
     line-height: 1.375rem;
-    font-weight: 600;
   }
 }
 @media (min-width: 1280px) {
   .footer .management__title, .footer .artist-group__title, .footer .arch-entertainment__title {
     font-size: 1.5rem;
     line-height: 1.375rem;
-    font-weight: 600;
   }
 }
 .footer .management__address, .footer .management__booking, .footer .management__email, .footer .artist-group__address, .footer .artist-group__booking, .footer .artist-group__email, .footer .arch-entertainment__address, .footer .arch-entertainment__booking, .footer .arch-entertainment__email {
@@ -256,14 +246,12 @@ html, body {
   .footer .management__address, .footer .management__booking, .footer .management__email, .footer .artist-group__address, .footer .artist-group__booking, .footer .artist-group__email, .footer .arch-entertainment__address, .footer .arch-entertainment__booking, .footer .arch-entertainment__email {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 1280px) {
   .footer .management__address, .footer .management__booking, .footer .management__email, .footer .artist-group__address, .footer .artist-group__booking, .footer .artist-group__email, .footer .arch-entertainment__address, .footer .arch-entertainment__booking, .footer .arch-entertainment__email {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 .footer .management__email, .footer .artist-group__email, .footer .arch-entertainment__email {
@@ -285,14 +273,12 @@ html, body {
   .footer .footer-logo__copyright {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 1280px) {
   .footer .footer-logo__copyright {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 .footer .footer-logo__title-tablet {
@@ -305,8 +291,9 @@ html, body {
   .footer__top {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: nowrap;
     margin-bottom: 1.5rem;
   }
@@ -325,21 +312,17 @@ html, body {
   .footer__top .in-touch__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) and (min-width: 1280px) {
   .footer__top .in-touch__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .footer__top .in-touch__media-icons {
-    margin-left: 1.875rem;
-    margin-bottom: 0.9375rem;
-    display: flex;
+    margin: 0 0 0.9375rem 1.875rem;
   }
   .footer__content {
     display: flex;
@@ -352,21 +335,18 @@ html, body {
     line-height: 1.125rem;
     font-weight: 400;
     font-family: "Avenir Next Regular";
-    margin-bottom: 1.2rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) and (min-width: 768px) and (max-width: 1279px) {
   .footer .management__title, .footer .artist-group__title, .footer .arch-entertainment__title {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) and (min-width: 1280px) {
   .footer .management__title, .footer .artist-group__title, .footer .arch-entertainment__title {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 .footer .footer-logo__title-mobile {
@@ -386,8 +366,9 @@ html, body {
   .footer__top {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: nowrap;
     margin: 0 0 1.5rem 3.75rem;
   }
@@ -406,14 +387,12 @@ html, body {
   .footer__top .in-touch__title {
     font-size: 1.5rem;
     line-height: 1.375rem;
-    font-weight: 600;
   }
 }
 @media (min-width: 1280px) and (min-width: 1280px) {
   .footer__top .in-touch__title {
     font-size: 1.5rem;
     line-height: 1.375rem;
-    font-weight: 600;
   }
 }
 @media (min-width: 1280px) {
@@ -435,21 +414,18 @@ html, body {
     line-height: 1.125rem;
     font-weight: 400;
     font-family: "Avenir Next Regular";
-    margin-bottom: 1.2rem;
   }
 }
 @media (min-width: 1280px) and (min-width: 768px) and (max-width: 1279px) {
   .footer .management__title, .footer .artist-group__title, .footer .arch-entertainment__title {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 1280px) and (min-width: 1280px) {
   .footer .management__title, .footer .artist-group__title, .footer .arch-entertainment__title {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 .footer .footer-logo__title-mobile {
@@ -488,14 +464,12 @@ html, body {
   .hero__title {
     font-size: 3.75rem;
     line-height: 4.25rem;
-    font-weight: 600;
   }
 }
 @media (min-width: 1280px) {
   .hero__title {
     font-size: 3.75rem;
     line-height: 4.25rem;
-    font-weight: 600;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -529,14 +503,12 @@ html, body {
   .about__title {
     font-size: 3.75rem;
     line-height: 4.25rem;
-    font-weight: 600;
   }
 }
 @media (min-width: 1280px) {
   .about__title {
     font-size: 3.75rem;
     line-height: 4.25rem;
-    font-weight: 600;
   }
 }
 .about__img {
@@ -557,14 +529,12 @@ html, body {
   .about__content {
     font-size: 1.5rem;
     line-height: 1.375rem;
-    font-weight: 600;
   }
 }
 @media (min-width: 1280px) {
   .about__content {
     font-size: 1.5rem;
     line-height: 1.375rem;
-    font-weight: 600;
   }
 }
 .about__quote-author {
@@ -579,14 +549,12 @@ html, body {
   .about__quote-author {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 1280px) {
   .about__quote-author {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -605,14 +573,12 @@ html, body {
   .about__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) and (min-width: 1280px) {
   .about__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -643,14 +609,12 @@ html, body {
   .about__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 1280px) and (min-width: 1280px) {
   .about__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 1280px) {
@@ -680,14 +644,12 @@ html, body {
   .information__title {
     font-size: 1.5rem;
     line-height: 1.375rem;
-    font-weight: 600;
   }
 }
 @media (min-width: 1280px) {
   .information__title {
     font-size: 1.5rem;
     line-height: 1.375rem;
-    font-weight: 600;
   }
 }
 .information__content {
@@ -700,14 +662,12 @@ html, body {
   .information__content {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 1280px) {
   .information__content {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -731,14 +691,12 @@ html, body {
   .information__title {
     font-size: 1.5rem;
     line-height: 1.375rem;
-    font-weight: 600;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) and (min-width: 1280px) {
   .information__title {
     font-size: 1.5rem;
     line-height: 1.375rem;
-    font-weight: 600;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -756,14 +714,12 @@ html, body {
   .information__content {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) and (min-width: 1280px) {
   .information__content {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -792,14 +748,12 @@ html, body {
   .information__title {
     font-size: 1.5rem;
     line-height: 1.375rem;
-    font-weight: 600;
   }
 }
 @media (min-width: 1280px) and (min-width: 1280px) {
   .information__title {
     font-size: 1.5rem;
     line-height: 1.375rem;
-    font-weight: 600;
   }
 }
 @media (min-width: 1280px) {
@@ -817,14 +771,12 @@ html, body {
   .information__content {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 1280px) and (min-width: 1280px) {
   .information__content {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 1280px) {
@@ -851,14 +803,12 @@ html, body {
   .gallery__title {
     font-size: 3.75rem;
     line-height: 4.25rem;
-    font-weight: 600;
   }
 }
 @media (min-width: 1280px) {
   .gallery__title {
     font-size: 3.75rem;
     line-height: 4.25rem;
-    font-weight: 600;
   }
 }
 .gallery__imgs {
@@ -881,14 +831,12 @@ html, body {
   .gallery__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) and (min-width: 1280px) {
   .gallery__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -917,14 +865,12 @@ html, body {
   .gallery__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 1280px) and (min-width: 1280px) {
   .gallery__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 400;
   }
 }
 @media (min-width: 1280px) {

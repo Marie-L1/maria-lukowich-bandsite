@@ -34,7 +34,7 @@
 
 // About the Musicians 
 .about{
-    @include mobile_padding;
+    @include mobile-padding;
     @include flex-column;
     width: 100%;
 
@@ -57,7 +57,7 @@
         margin: -0.625rem 0;
     }
     @include tablet{
-        @include tablet_padding;
+        @include tablet-padding;
         height: 90%;
     
         &__title{
@@ -75,7 +75,7 @@
         }
     }
     @include desktop{
-        @include tablet_padding;
+        @include tablet-padding;
     
         &__title{
             @include section-header;
@@ -96,7 +96,7 @@
 
 // information about the band
 .information{
-    @include mobile_padding;
+    @include mobile-padding;
 
     &__title{
         @include subheader;
@@ -106,7 +106,7 @@
         @include body;
     }
     @include tablet{
-        @include tablet_padding;
+        @include tablet-padding;
         @include flex-column;
         flex-wrap: nowrap;
 
@@ -127,7 +127,7 @@
         }
     }
     @include desktop{
-        @include tablet_padding;
+        @include tablet-padding;
         @include flex-column;
         flex-wrap: nowrap;
 
@@ -154,7 +154,7 @@
     width: 100%;
     @include flex-column;
     background-color: $alabaster;
-    @include mobile_padding;
+    @include mobile-padding;
     
     &__title{
         @include page-header;

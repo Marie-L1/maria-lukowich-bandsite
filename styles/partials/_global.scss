@@ -15,7 +15,7 @@ html, body {
 .navigation{
     @include flex-column;
     @include flex-center;
-    @include mobile_padding;
+    @include mobile-padding;
     background-color: $bandSite-black;
     color: $white;
     text-decoration: none;
@@ -118,11 +118,12 @@ html, body {
     }
 }
 
+
 .footer{
     // mobile view
     background-color: $bandSite-black;
     color: $mercury;
-    @include mobile_padding;
+    @include mobile-padding;
     @include flex-column;
 
     .in-touch{
@@ -169,8 +170,7 @@ html, body {
 
         &__top{
             @include flex-row;
-            align-items: center; 
-            justify-content: space-between;
+            @include space-between;
             flex-wrap: nowrap;
             margin-bottom: 1.5rem;
 
@@ -181,9 +181,7 @@ html, body {
                     @include section-header;
                 }
                 &__media-icons{
-                    margin-left: 1.875rem;
-                    margin-bottom: .9375rem;
-                    display: flex;
+                    margin: 0 0 0.9375rem 1.875rem;
                 }
             }
         }
@@ -196,7 +194,6 @@ html, body {
 
             &__title{
                 @include body;
-                margin-bottom: 1.2rem;
             }
         }
     }
@@ -219,8 +216,7 @@ html, body {
 
         &__top{
             @include flex-row;
-            align-items: center; 
-            justify-content: space-between;
+            @include space-between;
             flex-wrap: nowrap;
             margin: 0 0 1.5rem 3.75rem;
 
@@ -248,7 +244,6 @@ html, body {
 
             &__title{
                 @include body;
-                margin-bottom: 1.2rem;
             }
         }
     }
