@@ -154,8 +154,7 @@ html, body {
         margin-bottom: 1rem;
 
         &__title-mobile{
-            margin-top: 1.875rem;
-            margin-bottom: .625rem;
+            margin: 1.875rem 0 .625rem 0;
         }
         &__copyright{
             @include body;
@@ -174,14 +173,18 @@ html, body {
             justify-content: space-between;
             flex-wrap: nowrap;
             margin-bottom: 1.5rem;
-        }
-        .in-touch{
-            &__title{
-                @include section-header;
-            }
-            &__media-icons{
-                margin-left: 0;
+
+            .in-touch {
                 display: flex;
+                align-items: center;
+                &__title{
+                    @include section-header;
+                }
+                &__media-icons{
+                    margin-left: 1.875rem;
+                    margin-bottom: .9375rem;
+                    display: flex;
+                }
             }
         }
         &__content {
@@ -203,8 +206,7 @@ html, body {
             display: none;
         }
         &__title-tablet{
-            margin-top: 1.875rem;
-            margin-bottom: .625rem;
+            margin-bottom: 0.8rem;
             display: flex;
         }
         &__copyright{
@@ -214,64 +216,55 @@ html, body {
     // desktop view
     @include desktop {
         @include tablet_padding;
-        @include flex-row;
 
-        &__top {
+        &__top{
             @include flex-row;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
+            align-items: center; 
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            margin: 0 0 1.5rem 3.75rem;
 
-    .in-touch{
-        margin-bottom: 1rem;
-    
-        &__title{
-            @include section-header;
-            margin-bottom: 1rem;
-            @include flex-row;
+            .in-touch {
+                display: flex;
+                align-items: center;
+                &__title{
+                    @include subheader;
+                }
+                &__media-icons{
+                    width: 10%;
+                    margin: 0 0 1rem 1.875rem;
+                    display: flex;
+                }
+            }
         }
-        &__media-icons{
-            display: flex;
-            gap: 2.5rem;
-            width: 3.125rem;
+        &__content {
+            @include flex-row;
+            justify-content: flex-start;
+            gap: 50px;
+            margin-left: 3.75rem;
+            width: 100%;
+        }
+        .management, .artist-group, .arch-entertainment{
+
+            &__title{
+                @include body;
+                margin-bottom: 1.2rem;
+            }
         }
     }
-    .management, .artist-group, .arch-entertainment{
-        margin-bottom: 1rem;
-
-        &__title{
-            @include body;
-            margin-bottom: 1rem;
-        }
-
-        &__address{
-            @include body;
-            margin-bottom: 1rem;
-        }
-
-        &__email{
-            @include body;
-        }
-    }
-
     .footer-logo{
-        margin-bottom: 1rem;
 
         &__title-mobile{
-            @include page-header;
-            margin-bottom: 1rem;
-        }
-
-        &__copyright{
-            @include body;
-        }
-
-        &__title--tablet{
             display: none;
         }
-    }
+        &__title-tablet{
+            width: 8%;
+            margin-right: 60px;
+            margin-bottom: 0.8rem;
+            display: flex;
+        }
+        &__copyright{
+            margin-top: 1.875rem;
+        }
     }
 }
-
-
