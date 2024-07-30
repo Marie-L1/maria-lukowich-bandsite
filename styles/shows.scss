@@ -42,18 +42,35 @@
             @include section-header;
         }
         &__soundcloud{
-            max-width: 50vw;
-            height: 40%;
+            max-width: 45vw;
+            height: 50%;
             @include flex-center;
             margin-left: 2.8125rem;
             margin-bottom: .625rem;
         }
     }
     @include desktop{
-        height: 90vh;
+        height: 40vw;
+        background-position: center;
+        @include flex-row;
+        justify-content: space-evenly;
+        align-items: center;
     
-        &__title{
-            padding: 5rem;
+        &__text {
+            padding: .625rem 0 2.5rem 1.875rem;
+            
+        }
+        &__album{
+            // padding: 1.25rem 3rem;
+            @include subheader;
+        }
+        &__soundcloud{
+            max-width: 30vw;
+            height: 25%;
+            @include flex-center;
+            margin-left: 2.8125rem;
+            margin-bottom: .625rem;
+            border-radius: .3125rem;
         }
     }
 }
