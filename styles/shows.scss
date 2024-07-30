@@ -1,0 +1,57 @@
+@use "./partials/mixins" as *;
+@use './partials/variables' as *;
+@use './partials/typography' as *;
+@use './partials/global' as *;
+
+.hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/hero-shows.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 66.5vw;
+    background-position: top;
+    color: $white;
+    @include flex-center;
+    @include flex-column;
+
+    &__title{
+        padding: 1.5rem;
+        @include page-header;
+    }
+    &__album{
+        padding: 0 1.5rem 0 1.5rem;
+        @include body;
+    }
+    &__soundcloud{
+        max-width: 90vw;
+        max-height: 20vw;
+        @include flex-center;
+        margin-left: 45px;
+        padding-right: 25px;
+        margin-bottom: 0px;
+    }
+    @include tablet {
+        background-position: right;
+        &__title{
+            padding: 3rem;
+        }
+        &__album{
+            padding: 1.25rem 3rem;
+            @include section-header;
+        }
+        &__soundcloud{
+            max-width: 90vw;
+            max-height: 20vw;
+            @include flex-center;
+            margin-left: 45px;
+            padding-right: 25px;
+            margin-bottom: 0px;
+        }
+    }
+    @include desktop{
+        height: 90vh;
+    
+        &__title{
+            padding: 5rem;
+        }
+    }
+}
