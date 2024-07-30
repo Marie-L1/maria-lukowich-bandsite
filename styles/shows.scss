@@ -30,21 +30,23 @@
         margin-bottom: 0px;
     }
     @include tablet {
-        background-position: right;
-        &__title{
-            padding: 3rem;
+        background-position: center;
+        height: 65vw;
+
+        &__text {
+            padding: .625rem 0 2.5rem 1.875rem;
+            
         }
         &__album{
-            padding: 1.25rem 3rem;
+            // padding: 1.25rem 3rem;
             @include section-header;
         }
         &__soundcloud{
-            max-width: 90vw;
-            max-height: 20vw;
+            max-width: 50vw;
+            height: 40%;
             @include flex-center;
-            margin-left: 45px;
-            padding-right: 25px;
-            margin-bottom: 0px;
+            margin-left: 2.8125rem;
+            margin-bottom: .625rem;
         }
     }
     @include desktop{
