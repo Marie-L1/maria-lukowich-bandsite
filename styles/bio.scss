@@ -199,55 +199,59 @@
 
 
 .comments{
+    display: flex;
+    flex-direction: column;
 
     &__title{
         @include page-header;
-        padding: 20px;
+        padding: 1.25rem 0 2.8125rem 1.25rem;
     }
     &__form{
-        @include flex-column;
-        align-items: flex-start;
-        margin-right: -100px;
+        align-items: center;
+        margin-top: -4.375rem;
+        @include body;
+        margin-left: 2.5rem;
+        margin-right: 10px;
     }
     &__name-label, &__comment-label{
-        @include body;
         color: $sliver;
         margin-bottom: 5px;
+        align-self: flex-start;
+        margin-left: 50px;
     }
     &__name-input, &__comment-input{
+        align-items: flex-start;
         color: $bandSite-darkBlack;
         background-color: $alabaster;
         border: 1px solid $mercury;
         border-radius: 4px;
-        width: 50%;
+        width: 85%;
         min-height: 3rem;
         padding: .75rem;
         margin-bottom: 20px;
+        margin-left: 50px;
     }
-    // &__name-input {
-
-    // }
     &__comment-input{
         height: 6.25rem;
     }
-
-    // &__wrapper{ 
-    //     // 
-    // }
     &__img{
         width: 2.25rem;
         height: 2.25rem;
         border-radius: 50%;
-        margin-left: 20px;
+        margin-left: 30px;
+        margin-bottom: 10px;
     }
     &__btn {
         @include subheader;
         height: 2.5rem;
-        width: 50%;
+        width: 85%;
         border-radius: .25rem;
         background-color: $bandSite-black;
         color: $white;
         border: none;
+        margin-bottom: 20px;
+        margin-left: 50px;
+
     }
 
     @include tablet{
