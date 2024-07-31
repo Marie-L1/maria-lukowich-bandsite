@@ -38,9 +38,9 @@ function connectingComments() {
         commentLi.appendChild(commentTitle); // append the h3 to the li
 
         const commentContent = document.createElement("p");
-        commentContent.classContent("comment-list__Content");
-        commentContent.innerText = commentSection[i].title;
-        commentLi.appendChild(commentContent); // append the h3 to the li
+        commentContent.classContent("comment-list__content");
+        commentContent.innerText = commentSection[i].content;
+        commentLi.appendChild(commentContent); // append the p to the li
 
         commentList.appendChild(commentLi); // appending to the ul
     }
@@ -51,7 +51,7 @@ function connectingComments() {
         event.preventDefault(); // prevents reloading the page
         console.log("comment submitted")
         const commentTitle = event.target.title.value;
-        const commentContent = event.target.title.value;
+        const commentContent = event.target.content.value;
 
         console.log(commentTitle);
         console.log(commentContent);
