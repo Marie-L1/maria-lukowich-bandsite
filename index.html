@@ -89,7 +89,15 @@
                 
                 <button type="submit" class="comments__btn">COMMENT</button>
             </form>
-            <ul class="comments__content">
+
+            <form class="comments-form">
+                <input class="comment-form__title" type="text" placeholder="name"/>
+                <input class="comment-form__content" type="text" placeholder="content" />
+                <input class="comment-form__date" type="timestamp" placeholder="timestamp"/>
+            </form>
+
+            <!-- list to append comments to -->
+            <ul class="comments__list">
 
             </ul>
         </section>
@@ -138,5 +146,7 @@
                 <p class="footer__copyright">Copyright The Bees Knees © 2023 All Rights Reserved</p>
         </article>
     </footer>
+
+    <script src="./script/main.js"></script>
 </body>
 </html>

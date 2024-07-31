@@ -4,6 +4,16 @@ const commentSection = [
         title: "",
         content: "",
         timestamp: ""
+    },
+    {
+        title: "",
+        content: "",
+        timestamp: ""
+    },
+    {
+        title: "",
+        content: "",
+        timestamp: ""
     }
 ];
 
@@ -11,7 +21,7 @@ const commentSection = [
 // add a form with an event listener to add new comment to ul in the DOM
 
 const commentList = document.querySelector(".comment-list");
-const commentForm = document.querySelector(".form");
+const commentForm = document.querySelector(".comments-form");
 
 function connectingComments() {
     // clear ul html before to avoid duplicates
@@ -27,7 +37,7 @@ function connectingComments() {
         commentTitle.innerText = commentSection[i].title;
         commentLi.appendChild(commentTitle); // append the h3 to the li
 
-        const commentContent = document.createElement("h3");
+        const commentContent = document.createElement("p");
         commentContent.classContent("comment-list__Content");
         commentContent.innerText = commentSection[i].title;
         commentLi.appendChild(commentContent); // append the h3 to the li
