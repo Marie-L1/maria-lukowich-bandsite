@@ -212,25 +212,25 @@
         margin-top: -4.375rem;
         @include body;
         margin-left: 2.5rem;
-        margin-right: 10px;
+        margin-right: .625rem;
     }
     &__name-label, &__comment-label{
         color: $sliver;
-        margin-bottom: 5px;
+        margin-bottom: .3125rem;
         align-self: flex-start;
-        margin-left: 50px;
+        margin-left: 3.125rem;
     }
     &__name-input, &__comment-input{
         align-items: flex-start;
         color: $bandSite-darkBlack;
         background-color: $alabaster;
-        border: 1px solid $mercury;
-        border-radius: 4px;
+        border: .0625rem solid $mercury;
+        border-radius: .25rem;
         width: 85%;
         min-height: 3rem;
         padding: .75rem;
-        margin-bottom: 20px;
-        margin-left: 50px;
+        margin-bottom: 1.25rem;
+        margin-left: 3.125rem;
     }
     &__comment-input{
         height: 6.25rem;
@@ -239,8 +239,8 @@
         width: 2.25rem;
         height: 2.25rem;
         border-radius: 50%;
-        margin-left: 30px;
-        margin-bottom: 10px;
+        margin-left: 1.875rem;
+        margin-bottom: .625rem;
     }
     &__btn {
         @include subheader;
@@ -250,11 +250,9 @@
         background-color: $bandSite-black;
         color: $white;
         border: none;
-        margin-bottom: 20px;
-        margin-left: 50px;
-
+        margin-bottom: 1.25rem;
+        margin-left: 3.125rem;
     }
-
     @include tablet{
 
         &__title{
@@ -265,21 +263,17 @@
             align-items: center;
             margin-top: -4.375rem;
             @include body;
-            margin-left: 80px;
-            margin-right: 10px;
+            margin-left: 5rem;
+            margin-right: .625rem;
         }
         &__name-label, &__comment-label{
             color: $sliver;
-            margin-bottom: 5px;
+            margin-bottom: .3125rem;
             align-self: flex-start;
             margin-left: 6.25rem;
         }
         &__name-input, &__comment-input{
             align-items: flex-start;
-            color: $bandSite-darkBlack;
-            background-color: $alabaster;
-            border: 1px solid $mercury;
-            border-radius: 4px;
             width: 80%;
             min-height: 3rem;
             padding: .75rem;
@@ -310,11 +304,46 @@
         }
     }
     @include desktop{
-
+        display: flex;
+        &__form{
+            align-items: center;
+            margin-top: -4.375rem;
+            @include body;
+            margin-left: 5rem;
+            margin-right: .625rem;
+        }
+        &__title{
+            @include subheader;
+            padding: 1rem 0 3rem 18rem;
+        }
+        &__name-input, &__comment-input{
+            width: 30%;
+            align-self: flex-start;
+            min-height: 3rem;
+            padding: .75rem;
+            margin-bottom: 1.25rem;
+            margin-left: 18rem;
+        }
+        &__name-input{
+            margin-left: 20rem;
+        }
+        &__comment-input{
+            height: 6.25rem;
+        }
         &__img{
-            width: 3rem;
-            height: 3rem;
+            width: 3.75rem;
+            height: 3.75rem;
             border-radius: 50%;
+            margin-left: 6.5rem;
+            margin-bottom: -0.625rem;
+        }
+        &__btn {
+            @include body;
+            height: 2.5rem;
+            width: 12%;
+            margin-bottom: 1.25rem;
+            margin-left: 40rem;
+    
         }
     }
 }
