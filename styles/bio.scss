@@ -205,6 +205,7 @@
     &__title{
         @include page-header;
         padding: 1.25rem 0 2.8125rem 1.25rem;
+        color: $bandSite-black;
     }
     &__form{
         align-items: center;
@@ -256,10 +257,56 @@
 
     @include tablet{
 
+        &__title{
+            @include section-header;
+            padding: 1.25rem 0 2.8125rem 4rem;
+        }
+        &__form{
+            align-items: center;
+            margin-top: -4.375rem;
+            @include body;
+            margin-left: 80px;
+            margin-right: 10px;
+        }
+        &__name-label, &__comment-label{
+            color: $sliver;
+            margin-bottom: 5px;
+            align-self: flex-start;
+            margin-left: 6.25rem;
+        }
+        &__name-input, &__comment-input{
+            align-items: flex-start;
+            color: $bandSite-darkBlack;
+            background-color: $alabaster;
+            border: 1px solid $mercury;
+            border-radius: 4px;
+            width: 80%;
+            min-height: 3rem;
+            padding: .75rem;
+            margin-bottom: 20px;
+            margin-left: 6.25rem;
+        }
+        &__comment-input{
+            height: 6.25rem;
+        }
         &__img{
-            width: 3rem;
-            height: 3rem;
+            width: 3.75rem;
+            height: 3.75rem;
             border-radius: 50%;
+            margin-left: 6.5rem;
+            margin-bottom: -0.625rem;
+        }
+        &__btn {
+            @include body;
+            height: 2.5rem;
+            width: 20%;
+            border-radius: .25rem;
+            background-color: $bandSite-black;
+            color: $white;
+            border: none;
+            margin-bottom: 1.25rem;
+            margin-left: 38rem;
+    
         }
     }
     @include desktop{
