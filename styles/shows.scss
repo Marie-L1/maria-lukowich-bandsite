@@ -74,3 +74,18 @@
         }
     }
 }
+
+.shows {
+
+    &__title{
+        @include page-header;
+        padding: 1.875rem;
+
+    }
+    // &__list-titles{
+
+    // }
+    // &__array{
+
+    // }
+}

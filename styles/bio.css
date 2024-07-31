@@ -927,4 +927,12 @@ html, body {
     width: 30%;
     padding: 0.625rem;
   }
+}
+
+.comments__img {
+  min-height: 1.5625rem;
+  min-width: 1.5625rem;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border-radius: 50%;
 }/*# sourceMappingURL=bio.css.map */
