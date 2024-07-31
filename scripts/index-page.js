@@ -1,17 +1,17 @@
 // comment array
 const commentSection = [
     {
-        title: "Victor Pinto",
+        name: "Victor Pinto",
         content: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
         timestamp: "11/02/2023"
     },
     {
-        title: "Christina Cabrera",
+        name: "Christina Cabrera",
         content: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
         timestamp: "10/28/2023"
     },
     {
-        title: "Isaac Tadesse",
+        name: "Isaac Tadesse",
         content: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
         timestamp: "10/20/2023"
     }
@@ -32,10 +32,10 @@ function connectingComments() {
         const commentLi = document.createElementNS("li");
         commentLi.addEventListener("comment-list__item");
 
-        const commentTitle = document.createElement("h3");
-        commentTitle.classList("comment-list__title");
-        commentTitle.innerText = commentSection[i].title;
-        commentLi.appendChild(commentTitle); // append the h3 to the li
+        const commentName = document.createElement("h3");
+        commentName.classList("comment-list__Name");
+        commentName.innerText = commentSection[i].title;
+        commentLi.appendChild(commentName); // append the h3 to the li
 
         const commentContent = document.createElement("p");
         commentContent.classContent("comment-list__content");
@@ -50,10 +50,10 @@ function connectingComments() {
     commentForm.addEventListener("submit", function(event){
         event.preventDefault(); // prevents reloading the page
         console.log("comment submitted")
-        const commentTitle = event.target.title.value;
+        const commentName = event.target.name.value;
         const commentContent = event.target.content.value;
 
-        console.log(commentTitle);
+        console.log(commentName);
         console.log(commentContent);
 
         // adding the time stamp
@@ -64,7 +64,7 @@ function connectingComments() {
     
         // adding a newComment to the array
         const newComment = {
-            title: commentTitle,
+            name: commentName,
             content: commentContent,
             timestamp: formattedDateCommentAdded
         }
