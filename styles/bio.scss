@@ -200,14 +200,70 @@
 
 .comments{
 
+    &__title{
+        @include page-header;
+        padding: 20px;
+    }
+    &__form{
+        @include flex-column;
+        align-items: flex-start;
+        margin-right: -100px;
+    }
+    &__name-label, &__comment-label{
+        @include body;
+        color: $sliver;
+        margin-bottom: 5px;
+    }
+    &__name-input, &__comment-input{
+        color: $bandSite-darkBlack;
+        background-color: $alabaster;
+        border: 1px solid $mercury;
+        border-radius: 4px;
+        width: 50%;
+        min-height: 3rem;
+        padding: .75rem;
+        margin-bottom: 20px;
+    }
+    // &__name-input {
+
+    // }
+    &__comment-input{
+        height: 6.25rem;
+    }
+
     // &__wrapper{ 
     //     // 
     // }
     &__img{
-        min-height: 1.5625rem;
-        min-width: 1.5625rem;
-        width: 1.5625rem;
-        height: 1.5625rem;
+        width: 2.25rem;
+        height: 2.25rem;
         border-radius: 50%;
+        margin-left: 20px;
+    }
+    &__btn {
+        @include subheader;
+        height: 2.5rem;
+        width: 50%;
+        border-radius: .25rem;
+        background-color: $bandSite-black;
+        color: $white;
+        border: none;
+    }
+
+    @include tablet{
+
+        &__img{
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+        }
+    }
+    @include desktop{
+
+        &__img{
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+        }
     }
 }
