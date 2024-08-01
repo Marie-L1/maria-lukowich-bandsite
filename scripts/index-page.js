@@ -20,25 +20,27 @@ const commentSection = [
 // loop through the comments, creates and append to the <ul> DOM
 // add a form with an event listener to add new comment to ul in the DOM
 
-const commentList = document.querySelector(".comment-list");
-const commentForm = document.querySelector(".comments-form");
+// const commentList = document.querySelector(".comment-list");
+const commentForm = document.querySelector(".comments__form");
+
 
 function connectingComments() {
+    const commentList = document.querySelector(".comment-list");
     // clear ul html before to avoid duplicates
-    commentList.innerText = ""; 
+    // commentList.innerHTML = ""; 
 
     // loop through the array
-    for(let i =0; i < commentSection.length; i++){
-        const commentLi = document.createElementNS("li");
-        commentLi.addEventListener("comment-list__item");
+    for(let i = 0; i < commentSection.length; i++){
+        const commentLi = document.createElement("li");
+        commentLi.classList.add("comment-list__item");
 
         const commentName = document.createElement("h3");
-        commentName.classList("comment-list__Name");
+        commentName.classList.add("comment-list__Name");
         commentName.innerText = commentSection[i].title;
         commentLi.appendChild(commentName); // append the h3 to the li
 
         const commentContent = document.createElement("p");
-        commentContent.classContent("comment-list__content");
+        commentContent.classList.add("comment-list__content");
         commentContent.innerText = commentSection[i].content;
         commentLi.appendChild(commentContent); // append the p to the li
 
