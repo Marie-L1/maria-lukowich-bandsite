@@ -44,9 +44,8 @@ function displayingShows(){
         showsLi.classList.add("shows-list__item");
 
         // Date
-
-        const dateTitle = document.createElement("p");
-        dateTitle.classList.add("shows-list__title");
+        const dateTitle = document.createElement("h2");
+        dateTitle.classList.add("shows-list__title-date");
         dateTitle.innerText = "DATE";
         showsLi.appendChild(dateTitle); // append date title to the li
 
@@ -57,8 +56,8 @@ function displayingShows(){
 
 
         // Venue
-        const venueTitle = document.createElement("p");
-        venueTitle.classList.add("shows-list__title");
+        const venueTitle = document.createElement("h2");
+        venueTitle.classList.add("shows-list__title-venue");
         venueTitle.innerText = "VENUE";
         showsLi.appendChild(venueTitle); // append venue title to the li
 
@@ -69,8 +68,8 @@ function displayingShows(){
 
 
         // Location
-        const locationTitle = document.createElement("p");
-        locationTitle.classList.add("shows-list__title");
+        const locationTitle = document.createElement("h2");
+        locationTitle.classList.add("shows-list__title-shows");
         locationTitle.innerText = "LOCATION";
         showsLi.appendChild(locationTitle); // append location title to the li
 
