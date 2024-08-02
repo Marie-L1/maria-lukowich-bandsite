@@ -347,3 +347,31 @@
         }
     }
 }
+
+
+// styling for the comments created with JavaScript
+
+.comment-list{
+    list-style-type: none;
+    padding: 0;
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+
+    }
+    &__img{
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+    }
+    &__name{
+
+    }
+    &__content{
+
+    }
+    &__timestamp{
+
+    }
+}

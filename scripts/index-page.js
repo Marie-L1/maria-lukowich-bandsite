@@ -20,29 +20,40 @@ const commentSection = [
 // loop through the comments, creates and append to the <ul> DOM
 // add a form with an event listener to add new comment to ul in the DOM
 
-// const commentList = document.querySelector(".comment-list");
+const commentList = document.querySelector(".comment-list");
 const commentForm = document.querySelector(".comments__form");
 
 
 function connectingComments() {
-    const commentList = document.querySelector(".comment-list");
     // clear ul html before to avoid duplicates
-    // commentList.innerHTML = ""; 
+    commentList.innerHTML = ""; 
 
     // loop through the array
     for(let i = 0; i < commentSection.length; i++){
         const commentLi = document.createElement("li");
         commentLi.classList.add("comment-list__item");
 
+        const commentImg = document.createElement("img");
+        commentImg.classList.add("comment-list__img");
+        commentImg.src = "https://preview.colorkit.co/color/afafaf.png?size=wallpaper&static=true";
+        commentImg.alt= "Profile picture"
+        commentLi.appendChild(commentImg);  // append the grey profile img to the li
+
         const commentName = document.createElement("h3");
         commentName.classList.add("comment-list__Name");
-        commentName.innerText = commentSection[i].title;
+        commentName.innerText = commentSection[i].name;
         commentLi.appendChild(commentName); // append the h3 to the li
+
+        const commentTimestamp = document.createElement("p");
+        commentTimestamp.classList.add("comment-list__timestamp");
+        commentTimestamp.innerText = commentSection[i].timestamp;
+        commentLi.appendChild(commentTimestamp); // append the timestamp to the li
 
         const commentContent = document.createElement("p");
         commentContent.classList.add("comment-list__content");
         commentContent.innerText = commentSection[i].content;
         commentLi.appendChild(commentContent); // append the p to the li
+
 
         commentList.appendChild(commentLi); // appending to the ul
     }
@@ -52,8 +63,10 @@ function connectingComments() {
     commentForm.addEventListener("submit", function(event){
         event.preventDefault(); // prevents reloading the page
         console.log("comment submitted")
+
         const commentName = event.target.name.value;
-        const commentContent = event.target.content.value;
+        const commentContent = event.target.comment.value;
+
 
         console.log(commentName);
         console.log(commentContent);
@@ -62,6 +75,7 @@ function connectingComments() {
         const timeCommentAdded = Date.now();
         console.log(timeCommentAdded);
         const formattedDateCommentAdded = new Date(timeCommentAdded).toLocaleDateString();
+    
         console.log(formattedDateCommentAdded);
     
         // adding a newComment to the array
