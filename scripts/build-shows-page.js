@@ -47,8 +47,8 @@ function displayingShows(){
 
         const dateTitle = document.createElement("p");
         dateTitle.classList.add("shows-list__title");
-        dateTitle.innerText = "Date";
-        showsLi.appendChild(dateTitle); // append date title to the 
+        dateTitle.innerText = "DATE";
+        showsLi.appendChild(dateTitle); // append date title to the li
 
         const showsDate = document.createElement("h3");
         showsDate.classList.add("shows-list__date");
@@ -59,8 +59,8 @@ function displayingShows(){
         // Venue
         const venueTitle = document.createElement("p");
         venueTitle.classList.add("shows-list__title");
-        venueTitle.innerText = "Venue";
-        showsLi.appendChild(venueTitle); // append venue title
+        venueTitle.innerText = "VENUE";
+        showsLi.appendChild(venueTitle); // append venue title to the li
 
         const showsVenue = document.createElement("h3");
         showsVenue.classList.add("shows-list__venue");
@@ -71,8 +71,8 @@ function displayingShows(){
         // Location
         const locationTitle = document.createElement("p");
         locationTitle.classList.add("shows-list__title");
-        locationTitle.innerText = "Location";
-        showsLi.appendChild(locationTitle); // append location title
+        locationTitle.innerText = "LOCATION";
+        showsLi.appendChild(locationTitle); // append location title to the li
 
         const showsLocation = document.createElement("h3");
         showsLocation.classList.add("shows-list__location");
@@ -83,7 +83,7 @@ function displayingShows(){
         // Button
         const showsBtn = document.createElement("button");
         showsBtn.classList.add("shows-list__btn");
-        showsBtn.innerText = "Buy Tickets";
+        showsBtn.innerText = "BUY TICKETS";
         showsLi.appendChild(showsBtn); // appends button to the li
 
 

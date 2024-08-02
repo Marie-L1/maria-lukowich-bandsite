@@ -77,15 +77,49 @@
 
 .shows {
 
-    &__title{
+    &__main-title{
         @include page-header;
         padding: 1.875rem;
 
     }
-    // &__list-titles{
+    .shows-list{
+        &__shows-array{
+            list-style-type: none;
+        }
+        
+        /* style for the elements created in JavaScript */
+        &__title{
+            @include body;
+            color: $sliver;
+        }
+        &__item{
+            padding: 20px;
+            border-bottom: 2px solid $sliver;
+    
+        }
+        &__date{
+            padding-bottom: 1.25rem;
+    
+        }
+        &__venue{
+            padding-bottom: 1.25rem;
+    
+        }
+        &__location{
+            padding-bottom: 1.25rem;
+    
+        }
+        &__btn{
+            border-radius: 0.25rem;
+            border: none;
+            width: 75%;
+            height: 3rem;
+            color: $white;
+            background-color: $bandSite-black;
+            @include section-header;
+            
+    
+        }
 
-    // }
-    // &__array{
-
-    // }
+    }
 }
