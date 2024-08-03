@@ -3,6 +3,40 @@
 @use './partials/typography' as *;
 @use './partials/global' as *;
 
+// shows navigation adjustments
+.navigation__btns {
+
+    .navigation__shows-btn.active::after {
+    width: 600%; // Adjust this value for the new page
+    transform: translateX(-40%); // Adjust to centre the border horizontally
+
+        @include tablet{
+                width: 100%;
+                height: .25rem;
+                width: 90%; // Adjust this value for the new page
+                transform: translateX(-50%);
+            }
+        @include desktop{
+            width: 100%;
+            height: .25rem;
+            width: 90%; // Adjust this value for the new page
+            transform: translateX(-50%);
+        }
+    }
+    @include tablet{
+        display: flex;
+        justify-content: center;
+        margin-left: 2.5rem;
+    }
+    @include desktop{
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 2.5rem;
+    }
+}
+
+
+
 .hero{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/hero-shows.jpg);
     background-size: cover;
@@ -41,15 +75,15 @@
             @include section-header;
         }
         &__soundcloud{
-            max-width: 45vw;
-            height: 50%;
+            max-width: 50vw;
+            height: 40%;
             @include flex-center;
             margin-left: 2.8125rem;
             margin-bottom: .625rem;
         }
     }
     @include desktop{
-        height: 40vw;
+        height: 60vw;
         background-position: center;
         @include flex-row;
         justify-content: space-evenly;
@@ -64,8 +98,8 @@
             @include subheader;
         }
         &__soundcloud{
-            max-width: 30vw;
-            height: 25%;
+            max-width: 36vw;
+            height: 20%;
             @include flex-center;
             margin-left: 2.8125rem;
             margin-bottom: .625rem;
@@ -150,6 +184,7 @@
             flex-direction: flex-start;
             position: relative;
             border-bottom: none;
+            align-items: center;
 
             &::after { 
                 content: "";
@@ -203,11 +238,12 @@
         }
         &__item{
             padding: 2rem  1.25rem 0 1.25rem;
-            border-bottom: .0625rem solid $mercury;
             @include body;
             display: flex;
             justify-content: space-around;
             margin-left: 300px;
+            border: none;
+            
 
             &::before {
                 content: ""; 
@@ -230,7 +266,7 @@
             display:flex;
             justify-content: space-around;
             margin-bottom: 1rem;
-            margin-left: 18.8rem;
+            margin-left: 17rem;
             padding-bottom: 0;
             margin-top: -1.5625rem;
 
