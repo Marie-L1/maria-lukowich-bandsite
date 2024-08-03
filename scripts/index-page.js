@@ -64,10 +64,37 @@ function connectingComments() {
         event.preventDefault(); // prevents reloading the page
         console.log("comment submitted")
 
+
+        const nameInput = commentForm.querySelector(".comments__name-input");
+        const commentInput = commentForm.querySelector(".comments__comment-input");
+
+        // clear old error styles
+        nameInput.classList.remove("error");
+        commentInput.classList.remove("error");
+
+        // getting the input values
+        const nameValidate = nameInput.value.trim();
+        const commentValidate = commentInput.value.trim();
+
+        // validate the inputs 
+        let hasError = false;
+
+        if (!nameValidate){
+            nameInput.classList.add("error");
+            hasError = true;
+        }
+        if (!commentValidate){
+            commentInput.classList.add("error");
+            hasError = true;
+        }
+
+        if (hasError){
+            return; // exit the function
+        }
+        
+
         const commentName = event.target.name.value;
         const commentContent = event.target.comment.value;
-
-
         console.log(commentName);
         console.log(commentContent);
 

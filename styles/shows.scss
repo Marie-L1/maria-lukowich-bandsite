@@ -22,10 +22,10 @@
         @include body;
     }
     &__soundcloud{
-        max-width: 90vw;
-        max-height: 20vw;
+        max-width: 100vw;
+        max-height: 23vw;
         @include flex-center;
-        margin-left: 45px;
+        margin-left: 12px;
         padding-right: 25px;
         margin-bottom: 0px;
     }
@@ -38,7 +38,6 @@
             
         }
         &__album{
-            // padding: 1.25rem 3rem;
             @include section-header;
         }
         &__soundcloud{
@@ -89,7 +88,7 @@
         }
         /* style for the elements created in JavaScript */
         &__title-date, &__title-venue, &__title-shows{
-            @include shows-titles;
+            @include JavaScript-titles;
             color: $sliver;
             padding-bottom: .625rem;
         }
@@ -146,11 +145,22 @@
         }
         &__item{
             padding: 1.25rem;
-            border-bottom: .0625rem solid $mercury;
             @include body;
-            display: flex;
-            justify-content: space-around;
+            @include flex-around;
             flex-direction: flex-start;
+            position: relative;
+            border-bottom: none;
+
+            &::after { 
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 88%; // Adjust this value to make the border longer
+                height: .0625rem;
+                background-color: $mercury;
+                transform: translateX(-50%); 
+            }
         }
         &__btn{
             width: 18%;

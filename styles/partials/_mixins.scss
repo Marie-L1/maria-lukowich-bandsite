@@ -154,6 +154,11 @@
     align-items: center;
 }
 
+@mixin space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
 @mixin mobile-padding{
     padding: 24px 16px 16px 16px;
 }
