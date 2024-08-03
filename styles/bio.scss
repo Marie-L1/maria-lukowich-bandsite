@@ -50,11 +50,14 @@
     &__content{
         @include subheader;
         color: $bandSite-black;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
     } 
     &__quote-author{
         @include body;
         color: $bandSite-black;
-        margin: -0.625rem 0;
+        margin: 0.625rem 0 -0.625rem 0;
     }
     @include tablet{
         @include tablet-padding;
@@ -68,10 +71,10 @@
             margin: .625rem 0 1.25rem 2.6rem;
         }
         &__content{
-            margin: 0 5rem -1.875rem 2.5rem; 
+            margin: 0 5rem 0rem 2.5rem; 
         } 
         &__quote-author{
-            margin: 30px 0 -20px 40px;
+            margin: .625rem 0 -2.5rem 2.5rem;
         }
     }
     @include desktop{
@@ -140,7 +143,7 @@
         &__content{
             @include body;
             @include flex-row;
-            margin: 0 5rem;
+            margin: 0 3.4375rem 0 4rem;
 
             &-item {
                 margin: 0 3.125rem;
@@ -197,7 +200,7 @@
     }
 }
 
-
+// comment input form
 .comments{
     display: flex;
     flex-direction: column;
@@ -358,16 +361,32 @@
     margin-bottom: 20px;
 
     &__item{
+        position: relative;
         display: flex;
         flex-direction: column;
-        border-top: 1px solid $mercury;
-        border-bottom: 1px solid $mercury;
+
+        &::before, &::after { 
+            content: "";
+            position: absolute;
+            left: 50%;
+            width: 85%; // Adjust this value to make the border longer
+            height: .0625rem;
+            background-color: $mercury;
+            transform: translateX(-50%); // Centre the border horizontally 
+        }
+            &::before {
+                top: 0; // Position at the top
+            }
+
+            &::after {
+                bottom: 0; // Position at the bottom
+            }
     }
     &__img{
         width: 2.25rem;
         height: 2.25rem;
         border-radius: 50%;
-        margin: 1.25rem .625rem -3.75rem 3.125rem;
+        margin: 1.25rem 2rem -3.75rem 2.5rem;
     }
     &__name{
         @include subheader;
@@ -389,16 +408,32 @@
     }
     @include tablet{
         &__item{
+            position: relative;
             display: flex;
             flex-direction: column;
-            border-top: 1px solid $mercury;
-            border-bottom: 1px solid $mercury;
+
+            &::before, &::after { 
+                content: "";
+                position: absolute;
+                left: 50%;
+                width: 84%; 
+                height: .0625rem;
+                background-color: $mercury;
+                transform: translateX(-50%);  
+            }
+            &::before {
+                top: 0; 
+            }
+
+            &::after {
+                bottom: 0; 
+            }
         }
         &__img{
             width: 3.75rem;
             height: 3.75rem;
             border-radius: 50%;
-            margin: 1.25rem .625rem -3.75rem 7.5rem;
+            margin: 1.25rem 2rem -3.75rem 6rem;
         }
         &__name{
             @include JavaScript-titles;
@@ -417,10 +452,26 @@
     @include desktop{
         margin-bottom: 30px;
         &__item{
+            position: relative;
             display: flex;
             flex-direction: column;
-            border-top: 1px solid $mercury;
-            border-bottom: 1px solid $mercury;
+
+            &::before, &::after { 
+                content: "";
+                position: absolute;
+                left: 47%;
+                width: 38%; 
+                height: .0625rem;
+                background-color: $mercury;
+                transform: translateX(-50%);  
+            }
+            &::before {
+                top: 0; 
+            }
+
+            &::after {
+                bottom: 0; 
+            }
         }
         &__img{
             width: 3.75rem;
