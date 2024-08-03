@@ -40,7 +40,7 @@ function connectingComments() {
         commentLi.appendChild(commentImg);  // append the grey profile img to the li
 
         const commentName = document.createElement("h3");
-        commentName.classList.add("comment-list__Name");
+        commentName.classList.add("comment-list__name");
         commentName.innerText = commentSection[i].name;
         commentLi.appendChild(commentName); // append the h3 to the li
 

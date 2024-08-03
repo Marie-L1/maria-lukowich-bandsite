@@ -236,10 +236,10 @@
         height: 6.25rem;
     }
     &__img{
-        width: 2.25rem;
-        height: 2.25rem;
+        width: 2.4rem;
+        height: 2.4rem;
         border-radius: 50%;
-        margin-left: 1.875rem;
+        margin-left: 2.7rem;
         margin-bottom: .625rem;
     }
     &__btn {
@@ -299,7 +299,7 @@
             color: $white;
             border: none;
             margin-bottom: 1.25rem;
-            margin-left: 38rem;
+            margin-left: 35rem;
     
         }
     }
@@ -313,8 +313,8 @@
             margin-right: .625rem;
         }
         &__title{
-            @include subheader;
-            padding: 1rem 0 3rem 18rem;
+            @include section-header;
+            padding: 1rem 0 3rem 5.5rem;
         }
         &__name-input, &__comment-input{
             width: 30%;
@@ -325,24 +325,25 @@
             margin-left: 18rem;
         }
         &__name-input{
-            margin-left: 20rem;
+            margin-left: 15rem;
         }
         &__comment-input{
             height: 6.25rem;
+            margin-left: 13rem;
         }
         &__img{
             width: 3.75rem;
             height: 3.75rem;
             border-radius: 50%;
-            margin-left: 6.5rem;
-            margin-bottom: -0.625rem;
+            margin-left: 24rem;
+            margin-bottom: 1rem;
         }
         &__btn {
             @include body;
             height: 2.5rem;
             width: 12%;
             margin-bottom: 1.25rem;
-            margin-left: 40rem;
+            margin-left: 37.5rem;
     
         }
     }
@@ -354,24 +355,90 @@
 .comment-list{
     list-style-type: none;
     padding: 0;
+    margin-bottom: 20px;
 
     &__item{
         display: flex;
         flex-direction: column;
-
+        border-top: 1px solid $mercury;
+        border-bottom: 1px solid $mercury;
     }
     &__img{
         width: 2.25rem;
         height: 2.25rem;
         border-radius: 50%;
+        margin: 1.25rem .625rem -3.75rem 3.125rem;
     }
     &__name{
+        @include subheader;
+        display: flex;
+        justify-content: flex-start;
+        margin: 1.25rem 0 -1.25rem 6.25rem;
 
     }
     &__content{
-
+        @include body;
+        margin: 10px 30px 20px 100px;
     }
     &__timestamp{
+        @include body;
+        color: $sliver;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 2rem;
+    }
+    @include tablet{
+        &__item{
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid $mercury;
+            border-bottom: 1px solid $mercury;
+        }
+        &__img{
+            width: 3.75rem;
+            height: 3.75rem;
+            border-radius: 50%;
+            margin: 1.25rem .625rem -3.75rem 7.5rem;
+        }
+        &__name{
+            @include JavaScript-titles;
+            margin: 1.25rem 0 -1.25rem 10.5rem;
+    
+        }
+        &__content{
+            @include body;
+            margin: 10px 50px 30px 170px;
+        }
+        &__timestamp{
 
+            margin-right: 5rem;
+        }
+    }
+    @include desktop{
+        margin-bottom: 30px;
+        &__item{
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid $mercury;
+            border-bottom: 1px solid $mercury;
+        }
+        &__img{
+            width: 3.75rem;
+            height: 3.75rem;
+            border-radius: 50%;
+            margin: 1.25rem .625rem -3.75rem 24rem;
+        }
+        &__name{
+            @include JavaScript-titles;
+            margin: 0 0 -1.25rem 29rem;
+    
+        }
+        &__content{
+            @include body;
+            margin: 10px 460px 20px 465px;
+        }
+        &__timestamp{
+            margin-right: 29.5rem;
+        }
     }
 }
