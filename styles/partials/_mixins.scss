@@ -159,6 +159,11 @@
     justify-content: space-around;
 }
 
+@mixin space-evenly{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 @mixin mobile-padding{
     padding: 24px 16px 16px 16px;
 }

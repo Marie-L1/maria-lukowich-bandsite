@@ -5,32 +5,29 @@
 
 // shows navigation adjustments
 .navigation__btns {
-
     .navigation__shows-btn.active::after {
-    width: 600%; // Adjust this value for the new page
-    transform: translateX(-40%); // Adjust to centre the border horizontally
+    width: 600%; 
+    transform: translateX(-40%); 
 
         @include tablet {
                 width: 100%;
                 height: .25rem;
-                width: 90%; // Adjust this value for the new page
+                width: 90%; 
                 transform: translateX(-50%);
             }
         @include desktop{
             width: 100%;
             height: .25rem;
-            width: 90%; // Adjust this value for the new page
+            width: 90%; 
             transform: translateX(-50%);
         }
     }
     @include tablet{
-        display: flex;
-        justify-content: center;
+        @include flex-center;
         margin-left: 2.5rem;
     }
     @include desktop{
-        display: flex;
-        justify-content: space-evenly;
+        @include space-evenly;
         margin-left: 2.5rem;
     }
 }
@@ -59,9 +56,9 @@
         max-width: 100vw;
         max-height: 23vw;
         @include flex-center;
-        margin-left: .75rem;
+        margin: 0 0 0 0.75rem;
         padding-right: 1.5625rem;
-        margin-bottom: 0;
+        border-radius: .3125rem;
     }
     @include tablet {
         background-position: center;
@@ -77,15 +74,14 @@
         &__soundcloud{
             max-width: 50vw;
             height: 40%;
-            margin-left: 2.8125rem;
-            margin-bottom: .625rem;
+            margin: 0 0 0.625rem 2.8125rem;
         }
     }
     @include desktop{
         height: 60vw;
         background-position: center;
         @include flex-row;
-        justify-content: space-evenly;
+        @include space-evenly;
         align-items: center;
     
         &__text {
@@ -93,15 +89,12 @@
             
         }
         &__album{
-            // padding: 1.25rem 3rem;
             @include subheader;
         }
         &__soundcloud{
             max-width: 36vw;
             height: 20%;
-            margin-left: 2.8125rem;
-            margin-bottom: .625rem;
-            border-radius: .3125rem;
+            margin: 0 0 0.625rem 2.8125rem 
         }
     }
 }
@@ -128,6 +121,15 @@
             padding: 1.25rem;
             border-bottom: .125rem solid $mercury;
             @include body;
+            transition: background-color 0.3s ease;
+
+            &:hover{
+                background-color: $alabaster;
+            }
+
+            &:active{
+                background-color: $mercury;
+            }
         }
         &__date {
             @include JavaScript-titles;
@@ -149,18 +151,11 @@
         // headers
         &__header {
             display: none;
-            margin-bottom: 1rem;
-            padding-bottom: .625rem;
-
-            h2 {
-                @include JavaScript-titles;
-            color: $sliver;
-            }
         }
     }
+
     @include tablet{
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
 
     &__main-title{
         @include section-header;
@@ -176,8 +171,6 @@
             display: none;
         }
         &__item{
-            padding: 1.25rem;
-            @include body;
             @include space-around;
             flex-direction: flex-start;
             position: relative;
@@ -189,7 +182,7 @@
                 position: absolute;
                 bottom: 0;
                 left: 50%;
-                width: 88%; // Adjust this value to make the border longer
+                width: 88%;
                 height: .0625rem;
                 background-color: $mercury;
                 transform: translateX(-50%); 
@@ -197,28 +190,24 @@
         }
         &__btn{
             width: 18%;
-            height: 3rem;
             @include JavaScript-titles;
         }
         // headers
         &__header {
-            display:flex;
-            justify-content: space-around;
-            margin-bottom: 1rem;
-            margin-right: 20rem;
+            @include space-around;
+            margin: 0 20rem 1rem 0;
             padding-bottom: .625rem;
 
             h2 {
                 @include JavaScript-titles;
-                padding-bottom: .625rem;
-                display: flex;
+                color: $sliver;
             }
         }
     }
     }
+
     @include desktop {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
 
     &__main-title{
         @include section-header;
@@ -236,42 +225,30 @@
         }
         &__item{
             padding: 2rem  1.25rem 0 1.25rem;
-            @include body;
-            display: flex;
-            justify-content: space-around;
-            margin-left: 300px;
+            @include space-around;
+            margin-left: 18.75rem;
             border: none;
             
-
             &::before {
                 content: ""; 
                 position: absolute;
-                bottom: 0; // Align to bottom of the item
-                left: -500px; // Align to left edge
+                bottom: 0;
+                left: -500px;
                 right: -500px;
-                width: 10%; // Adjust width to change border length
+                width: 10%;
             }
-    
         }
         &__btn{
             margin: -0.625rem .625rem 1.25rem 0;
             width: 18%;
-            height: 3rem;
             @include JavaScript-titles;
         }
         // headers
         &__header {
-            display:flex;
-            justify-content: space-around;
-            margin-bottom: 1rem;
-            margin-left: 17rem;
+            @include space-evenly;
+            margin: -1.5625rem 14rem 1rem 13rem;
             padding-bottom: 0;
-            margin-top: -1.5625rem;
-
-            h2 {
-                @include JavaScript-titles;
-                display: flex;
-            }
+            @include JavaScript-titles;
         }
 
     }
