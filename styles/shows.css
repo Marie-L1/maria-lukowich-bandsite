@@ -594,9 +594,9 @@ body {
   display: flex;
   align-content: center;
   justify-content: center;
-  margin-left: 12px;
-  padding-right: 25px;
-  margin-bottom: 0px;
+  margin-left: 0.75rem;
+  padding-right: 1.5625rem;
+  margin-bottom: 0;
 }
 @media (min-width: 768px) {
   .hero {
@@ -629,9 +629,6 @@ body {
   .hero__soundcloud {
     max-width: 50vw;
     height: 40%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
     margin-left: 2.8125rem;
     margin-bottom: 0.625rem;
   }
@@ -671,9 +668,6 @@ body {
   .hero__soundcloud {
     max-width: 36vw;
     height: 20%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
     margin-left: 2.8125rem;
     margin-bottom: 0.625rem;
     border-radius: 0.3125rem;
