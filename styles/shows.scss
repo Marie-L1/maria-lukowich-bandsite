@@ -146,7 +146,7 @@
         &__item{
             padding: 1.25rem;
             @include body;
-            @include flex-around;
+            @include space-around;
             flex-direction: flex-start;
             position: relative;
             border-bottom: none;
