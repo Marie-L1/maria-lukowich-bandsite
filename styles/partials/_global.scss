@@ -12,6 +12,10 @@ html, body {
     overflow: auto;
 }
 
+body{
+    @include body;
+}
+
 .navigation{
     @include flex-column;
     @include flex-center;
