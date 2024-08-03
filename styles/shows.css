@@ -692,8 +692,6 @@ html, body {
   }
 }
 .shows .shows-list__date {
-  padding-bottom: 1.25rem;
-  font-weight: 600;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 600;
@@ -711,10 +709,7 @@ html, body {
     line-height: 1.375rem;
   }
 }
-.shows .shows-list__venue {
-  padding-bottom: 1.25rem;
-}
-.shows .shows-list__location {
+.shows .shows-list__date, .shows .shows-list__venue, .shows .shows-list__location {
   padding-bottom: 1.25rem;
 }
 .shows .shows-list__btn {
@@ -738,6 +733,30 @@ html, body {
 @media (min-width: 1280px) {
   .shows .shows-list__btn {
     font-size: 1.5rem;
+    line-height: 1.375rem;
+  }
+}
+.shows .shows-list__header {
+  display: none;
+  margin-bottom: 1rem;
+  padding-bottom: 0.625rem;
+}
+.shows .shows-list__header h2 {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 600;
+  font-family: "Avenir Next Demi";
+  color: #AFAFAF;
+}
+@media (min-width: 768px) {
+  .shows .shows-list__header h2 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows .shows-list__header h2 {
+    font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
@@ -767,31 +786,15 @@ html, body {
   }
 }
 @media (min-width: 768px) {
+  .shows .shows-array {
+    margin-bottom: 2.5rem;
+  }
   .shows .shows-list {
     /* style for the elements created in JavaScript */
   }
   .shows .shows-list__title-date, .shows .shows-list__title-venue, .shows .shows-list__title-shows {
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
-    font-weight: 600;
-    font-family: "Avenir Next Demi";
-    padding-bottom: 0.625rem;
-    display: flex;
+    display: none;
   }
-}
-@media (min-width: 768px) and (min-width: 768px) {
-  .shows .shows-list__title-date, .shows .shows-list__title-venue, .shows .shows-list__title-shows {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
-}
-@media (min-width: 768px) and (min-width: 1280px) {
-  .shows .shows-list__title-date, .shows .shows-list__title-venue, .shows .shows-list__title-shows {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
-}
-@media (min-width: 768px) {
   .shows .shows-list__item {
     padding: 1.25rem;
     border-bottom: 0.0625rem solid #E1E1E1;
@@ -801,6 +804,7 @@ html, body {
     font-family: "Avenir Next Regular";
     display: flex;
     justify-content: space-around;
+    flex-direction: flex-start;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
@@ -833,6 +837,154 @@ html, body {
 }
 @media (min-width: 768px) and (min-width: 1280px) {
   .shows .shows-list__btn {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+@media (min-width: 768px) {
+  .shows .shows-list__header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    margin-right: 20rem;
+    padding-bottom: 0.625rem;
+  }
+  .shows .shows-list__header h2 {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 600;
+    font-family: "Avenir Next Demi";
+    padding-bottom: 0.625rem;
+    display: flex;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .shows .shows-list__header h2 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .shows .shows-list__header h2 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows {
+    display: flex;
+    flex-direction: column;
+  }
+  .shows__main-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+    font-family: "Avenir Next Demi";
+    padding: 3rem 3rem 0 3rem;
+  }
+}
+@media (min-width: 1280px) and (min-width: 768px) {
+  .shows__main-title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+@media (min-width: 1280px) and (min-width: 1280px) {
+  .shows__main-title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows .shows-array {
+    margin-bottom: 1.875rem;
+  }
+  .shows .shows-list {
+    /* style for the elements created in JavaScript */
+  }
+  .shows .shows-list__title-date, .shows .shows-list__title-venue, .shows .shows-list__title-shows {
+    display: none;
+  }
+  .shows .shows-list__item {
+    padding: 2rem 1.25rem 0 1.25rem;
+    border-bottom: 0.0625rem solid #E1E1E1;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    font-family: "Avenir Next Regular";
+    display: flex;
+    justify-content: space-around;
+    margin-left: 300px;
+  }
+}
+@media (min-width: 1280px) and (min-width: 768px) {
+  .shows .shows-list__item {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+@media (min-width: 1280px) and (min-width: 1280px) {
+  .shows .shows-list__item {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows .shows-list__item::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -500px;
+    right: -500px;
+    width: 10%;
+  }
+  .shows .shows-list__btn {
+    margin: -0.625rem 0.625rem 1.25rem 0;
+    width: 18%;
+    height: 3rem;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 600;
+    font-family: "Avenir Next Demi";
+  }
+}
+@media (min-width: 1280px) and (min-width: 768px) {
+  .shows .shows-list__btn {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+@media (min-width: 1280px) and (min-width: 1280px) {
+  .shows .shows-list__btn {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows .shows-list__header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    margin-left: 18.8rem;
+    padding-bottom: 0;
+    margin-top: -1.5625rem;
+  }
+  .shows .shows-list__header h2 {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 600;
+    font-family: "Avenir Next Demi";
+    display: flex;
+  }
+}
+@media (min-width: 1280px) and (min-width: 768px) {
+  .shows .shows-list__header h2 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+@media (min-width: 1280px) and (min-width: 1280px) {
+  .shows .shows-list__header h2 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }

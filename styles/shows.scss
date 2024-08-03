@@ -75,6 +75,7 @@
     }
 }
 
+
 .shows {
 
     &__main-title{
@@ -86,7 +87,6 @@
         &__shows-array{
             list-style-type: none;
         }
-        
         /* style for the elements created in JavaScript */
         &__title-date, &__title-venue, &__title-shows{
             @include shows-titles;
@@ -97,19 +97,12 @@
             padding: 1.25rem;
             border-bottom: .125rem solid $mercury;
             @include body;
-    
         }
-        &__date{
-            padding-bottom: 1.25rem;
-            font-weight: 600;
+        &__date {
             @include shows-titles;
     
         }
-        &__venue{
-            padding-bottom: 1.25rem;
-    
-        }
-        &__location{
+        &__date, &__venue, &__location{
             padding-bottom: 1.25rem;
     
         }
@@ -122,7 +115,17 @@
             background-color: $bandSite-black;
             @include subheader;
         }
+        // headers
+        &__header {
+            display: none;
+            margin-bottom: 1rem;
+            padding-bottom: .625rem;
 
+            h2 {
+                @include shows-titles;
+            color: $sliver;
+            }
+        }
     }
     @include tablet{
         display: flex;
@@ -133,12 +136,13 @@
         padding: 3rem;
 
     }
+    .shows-array{
+        margin-bottom: 2.5rem;
+    }
     .shows-list{
         /* style for the elements created in JavaScript */
         &__title-date, &__title-venue, &__title-shows {
-            @include shows-titles;
-            padding-bottom: .625rem;
-            display: flex;
+            display: none;
         }
         &__item{
             padding: 1.25rem;
@@ -146,13 +150,84 @@
             @include body;
             display: flex;
             justify-content: space-around;
-    
+            flex-direction: flex-start;
         }
         &__btn{
             width: 18%;
             height: 3rem;
             @include shows-titles;
-            // margin-left: 50px;
+        }
+        // headers
+        &__header {
+            display:flex;
+            justify-content: space-around;
+            margin-bottom: 1rem;
+            margin-right: 20rem;
+            padding-bottom: .625rem;
+
+            h2 {
+                @include shows-titles;
+                padding-bottom: .625rem;
+                display: flex;
+            }
+        }
+    }
+    }
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+
+    &__main-title{
+        @include section-header;
+        padding: 3rem 3rem 0 3rem;
+
+    }
+    .shows-array{
+        margin-bottom: 1.875rem;
+    }
+    .shows-list{
+
+        /* style for the elements created in JavaScript */
+        &__title-date, &__title-venue, &__title-shows {
+            display: none;
+        }
+        &__item{
+            padding: 2rem  1.25rem 0 1.25rem;
+            border-bottom: .0625rem solid $mercury;
+            @include body;
+            display: flex;
+            justify-content: space-around;
+            margin-left: 300px;
+
+            &::before {
+                content: ""; 
+                position: absolute;
+                bottom: 0; // Align to bottom of the item
+                left: -500px; // Align to left edge
+                right: -500px;
+                width: 10%; // Adjust width to change border length
+            }
+    
+        }
+        &__btn{
+            margin: -0.625rem .625rem 1.25rem 0;
+            width: 18%;
+            height: 3rem;
+            @include shows-titles;
+        }
+        // headers
+        &__header {
+            display:flex;
+            justify-content: space-around;
+            margin-bottom: 1rem;
+            margin-left: 18.8rem;
+            padding-bottom: 0;
+            margin-top: -1.5625rem;
+
+            h2 {
+                @include shows-titles;
+                display: flex;
+            }
         }
 
     }

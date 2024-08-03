@@ -39,6 +39,24 @@ function displayingShows(){
     // clear ul html before to avoide duplication of shows
     showsList.innerHTML = "";
 
+     // Create and append the header titles
+     const header = document.createElement("div");
+     header.classList.add("shows-list__header");
+ 
+     const dateTitle = document.createElement("h2");
+     dateTitle.innerText = "DATE";
+     header.appendChild(dateTitle);
+ 
+     const venueTitle = document.createElement("h2");
+     venueTitle.innerText = "VENUE";
+     header.appendChild(venueTitle);
+ 
+     const locationTitle = document.createElement("h2");
+     locationTitle.innerText = "LOCATION";
+     header.appendChild(locationTitle);
+ 
+     showsList.appendChild(header);
+
     for(let i = 0; i < showsSection.length; i++){
         const showsLi = document.createElement("li");
         showsLi.classList.add("shows-list__item");
