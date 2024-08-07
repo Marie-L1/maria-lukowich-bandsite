@@ -1,3 +1,34 @@
+/* sprint-3 */
+
+// creating a variable for the key 
+const API_KEY = "dffc64ab-d0d2-402e-973e-a6233f0562fd";
+
+const bandsiteApi = new BandSiteApi(API_KEY);
+console.log(bandsiteApi);
+
+// testing the getComments function
+async function testApiCalls(){
+    try{
+        // getComment method
+        const comments = await bandsiteApi.getComments();
+        console.log(comments);
+
+        //postComment method
+        const newCommentObject = {
+            name: "",
+            comment: ""
+        };
+
+        const newCommentResponse = await bandsiteApi.postComments(newCommentObject);
+        console.log(newCommentResponse);
+
+    } catch(e){
+        console.error(e);
+    }
+}
+testApiCalls();
+
+
 // comment array
 const commentSection = [
     {
@@ -16,6 +47,8 @@ const commentSection = [
         timestamp: "10/20/2023"
     }
 ];
+
+/* sprint-2 */
 
 // loop through the comments, creates and append to the <ul> DOM
 // add a form with an event listener to add new comment to ul in the DOM
@@ -121,34 +154,3 @@ function connectingComments() {
 
 
 connectingComments();
-
-
-// bandsite 3
-
-// creating a variable for the key 
-const API_KEY = "dffc64ab-d0d2-402e-973e-a6233f0562fd";
-
-const bandsiteApi = new BandSiteApi(API_KEY);
-console.log(bandsiteApi);
-
-// testing the getComments function
-async function testApiCalls(){
-    try{
-        // getComment method
-        const comments = await bandsiteApi.getComments();
-        console.log(comments);
-
-        //postComment method
-        const newCommentObject = {
-            name: "",
-            comment: ""
-        };
-
-        const newCommentResponse = await bandsiteApi.postComments(newCommentObject);
-        console.log(newCommentResponse);
-
-    } catch(e){
-        console.error(e);
-    }
-}
-testApiCalls();
