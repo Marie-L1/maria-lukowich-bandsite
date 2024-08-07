@@ -121,3 +121,34 @@ function connectingComments() {
 
 
 connectingComments();
+
+
+// bandsite 3
+
+// creating a variable for the key 
+const API_KEY = "dffc64ab-d0d2-402e-973e-a6233f0562fd";
+
+const bandsiteApi = new BandSiteApi(API_KEY);
+console.log(bandsiteApi);
+
+// testing the getComments function
+async function testApiCalls(){
+    try{
+        // getComment method
+        const comments = await bandsiteApi.getComments();
+        console.log(comments);
+
+        //postComment method
+        const newCommentObject = {
+            name: "",
+            comment: ""
+        };
+
+        const newCommentResponse = await bandsiteApi.postComments(newCommentObject);
+        console.log(newCommentResponse);
+
+    } catch(e){
+        console.error(e);
+    }
+}
+testApiCalls();
