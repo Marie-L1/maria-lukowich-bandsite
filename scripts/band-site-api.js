@@ -12,8 +12,8 @@ class BandSiteApi {
     }
 
     // postComments method
-    async postComments(newCommentObject){
-        const response = await axios.post(`${this.baseUrl}/comments?api_key=${this.apiKey}`, newCommentObject)
+    async postComments(commentObject){
+        const response = await axios.post(`${this.baseUrl}/comments?api_key=${this.apiKey}`, commentObject)
         return response.data;
     }
 }

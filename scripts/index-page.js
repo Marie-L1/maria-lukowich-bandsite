@@ -14,12 +14,12 @@ async function testApiCalls(){
         console.log(comments);
 
         //postComment method
-        const newCommentObject = {
+        const commentObject = {
             name: "",
             comment: ""
         };
 
-        const newCommentResponse = await bandsiteApi.postComments(newCommentObject);
+        const newCommentResponse = await bandsiteApi.postComments(commentObject);
         console.log(newCommentResponse);
 
     } catch(e){
