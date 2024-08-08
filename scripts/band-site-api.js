@@ -1,4 +1,3 @@
-
 class BandSiteApi {
     constructor(apiKey){
         this.apiKey = apiKey;
@@ -7,19 +6,39 @@ class BandSiteApi {
 
     // getComments method
     async getComments(){
-        const response = await axios.get(`${this.baseUrl}/comments?api_key=${this.apiKey}`);
-        return response.data;
+        const endpoint = "comments";
+        try {
+            const response = await axios.get(`${this.baseUrl}/${endpoint}?api_key=${this.apiKey}`);
+            
+            return response.data.sort(function (a, b) {
+                return b.timeStamp - a.timeStamp;
+            })
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     // postComments method
-    async postComments(commentObject){
-        const response = await axios.post(`${this.baseUrl}/comments?api_key=${this.apiKey}`, commentObject)
+    async postComments(newComments){
+        const endpoint = "comments";
+        try{
+            const response = await axios.post(`${this.baseUrl}/${endpoint}?api_key=${this.apiKey}`, newComments)
+            return response.data;
+        } catch(error){
+
+        }
+    }
+
+    // getShows method
+    async getShows(){
+        const endpoint = "shows";
+        const response = await axios.get(`${this.baseUrl}/${endpoint}?api_key=${this.apiKey}`);
         return response.data;
+    }
+
+    testApi(){
+        console.log("This is a test");
     }
 }
 
-
-
-
-
-// getShows method with async
+export default BandSiteApi;
