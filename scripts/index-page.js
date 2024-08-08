@@ -1,5 +1,5 @@
 /* sprint-3 */
-import BandSiteApi from "./band-site-api";
+import BandSiteApi from "./band-site-api.js";
 
 // gather DOM elements
 const commentList = document.querySelector(".comment-list");
@@ -12,7 +12,6 @@ const api_key = "dffc64ab-d0d2-402e-973e-a6233f0562fd";
 const bandsiteApi = new BandSiteApi(api_key);
 
 let commentsApi = await bandsiteApi.getComments();
-
 console.log(commentsApi);
 
 
@@ -26,7 +25,7 @@ async function getCommentDataAndAppendToList(){
     commentList.innerText = ""; 
 
     // loop through comment array
-    comments.forEach((comment) => {
+    commentData.forEach((comment) => {
         console.log(comment);   // comment object
 
         const commentLi = document.createElement("li");
@@ -40,17 +39,17 @@ async function getCommentDataAndAppendToList(){
 
         const commentName = document.createElement("h3");
         commentName.classList.add("comment-list__name");
-        commentName.innerText = commentSection[i].name;
+        commentName.innerText = comment.name;
         commentLi.appendChild(commentName); // append the h3 to the li
 
         const commentTimestamp = document.createElement("p");
         commentTimestamp.classList.add("comment-list__timestamp");
-        commentTimestamp.innerText = commentSection[i].timestamp;
+        commentTimestamp.innerText = comment.timestamp;
         commentLi.appendChild(commentTimestamp); // append the timestamp to the li
 
         const commentContent = document.createElement("p");
         commentContent.classList.add("comment-list__content");
-        commentContent.innerText = commentSection[i].content;
+        commentContent.innerText = comment.comment;
         commentLi.appendChild(commentContent); // append the p to the li
 
 
@@ -66,7 +65,8 @@ commentForm.addEventListener("submit", async (event) => {
 
     const newComment = {
         name: event.target.commentName.value,
-        comment: event.target.commentContent.value
+        comment: event.target.commentContent.value,
+        timestamp: Date.now()   // add the current timestamp
     }
 
     const response = await bandsiteApi.postComments(newComment);
@@ -158,19 +158,19 @@ getCommentDataAndAppendToList();    // runs when the js first loads
 //         console.log(commentName);
 //         console.log(commentContent);
 
-//         // adding the time stamp
-//         const timeCommentAdded = Date.now();
-//         console.log(timeCommentAdded);
-//         const formattedDateCommentAdded = new Date(timeCommentAdded).toLocaleDateString();
+        // adding the time stamp
+    //     const timeCommentAdded = Date.now();
+    //     console.log(timeCommentAdded);
+    //     const formattedDateCommentAdded = new Date(timeCommentAdded).toLocaleDateString();
     
-//         console.log(formattedDateCommentAdded);
+    //     console.log(formattedDateCommentAdded);
     
-//     //     // adding a newComment to the array
-//     //     const newComment = {
-//     //         name: commentName,
-//     //         content: commentContent,
-//     //         timestamp: formattedDateCommentAdded
-//     //     }
+    // //     // adding a newComment to the array
+    //     const newComment = {
+    //         name: commentName,
+    //         content: commentContent,
+    //         timestamp: formattedDateCommentAdded
+    //     }
 
 //     //     commentSection.unshift(newComment); // adding the comment to the top of the array
 
