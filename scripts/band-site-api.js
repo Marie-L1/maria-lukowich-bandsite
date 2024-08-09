@@ -11,7 +11,7 @@ class BandSiteApi {
             const response = await axios.get(`${this.baseUrl}/${endpoint}?api_key=${this.apiKey}`);
             
             return response.data.sort(function (a, b) {
-                return b.timeStamp - a.timeStamp;
+                return b.timestamp - a.timestamp;
             })
         } catch (error) {
             console.log(error)

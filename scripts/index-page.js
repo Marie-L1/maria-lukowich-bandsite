@@ -22,7 +22,7 @@ async function getCommentDataAndAppendToList(){
     console.log(commentData);
 
     // clear ul html before to avoid duplicates
-    commentList.innerText = ""; 
+    commentList.innerHTML = ""; 
 
     // loop through comment array
     commentData.forEach((comment) => {
@@ -42,9 +42,12 @@ async function getCommentDataAndAppendToList(){
         commentName.innerText = comment.name;
         commentLi.appendChild(commentName); // append the h3 to the li
 
+        // format the timestamp to "MM/DD/YYYY"
+        const formattedDateCommentAdded = new Date(comment.timestamp).toLocaleDateString();
+
         const commentTimestamp = document.createElement("p");
         commentTimestamp.classList.add("comment-list__timestamp");
-        commentTimestamp.innerText = comment.timestamp;
+        commentTimestamp.innerText = formattedDateCommentAdded;
         commentLi.appendChild(commentTimestamp); // append the timestamp to the li
 
         const commentContent = document.createElement("p");
@@ -62,13 +65,41 @@ async function getCommentDataAndAppendToList(){
 commentForm.addEventListener("submit", async (event) => {
     event.preventDefault(); // prevents reloading the page
     console.log("comment submitted")
+    console.log(event.target)
 
-    const newComment = {
-        name: event.target.commentName.value,
-        comment: event.target.commentContent.value,
-        timestamp: Date.now()   // add the current timestamp
+    const nameInput = commentForm.querySelector(".comments__name-input");
+    const commentInput = commentForm.querySelector(".comments__comment-input");
+
+    // clear old error styles
+    nameInput.classList.remove("error");
+    commentInput.classList.remove("error");
+
+    // getting the input values
+    const nameValidate = nameInput.value.trim();
+    const commentValidate = commentInput.value.trim();
+
+    // validate the inputs 
+    let hasError = false;
+
+    if (!nameValidate){
+        nameInput.classList.add("error");
+        hasError = true;
+    }
+    if (!commentValidate){
+        commentInput.classList.add("error");
+        hasError = true;
     }
 
+    if (hasError){
+        return; // exit the function
+    }
+
+    const newComment = {
+        name: event.target.name.value,
+        comment: event.target.comment.value
+    }
+    console.log(newComment)
+    
     const response = await bandsiteApi.postComments(newComment);
     console.log(response);
     getCommentDataAndAppendToList();  // call function to reload comments with the latest data
@@ -78,90 +109,49 @@ commentForm.addEventListener("submit", async (event) => {
 
 getCommentDataAndAppendToList();    // runs when the js first loads
 
-/* sprint-2 */
-
-// loop through the comments, creates and append to the <ul> DOM
-// add a form with an event listener to add new comment to ul in the DOM
-
-
-// function connectingComments() {
-    // clear ul html before to avoid duplicates
-    // commentList.innerText = ""; 
-
-    // // loop through the array
-    // // for(let i = 0; i < commentSection.length; i++){
-    // //     const commentLi = document.createElement("li");
-    // //     commentLi.classList.add("comment-list__item");
-
-    //     const commentImg = document.createElement("img");
-    //     commentImg.classList.add("comment-list__img");
-    //     commentImg.src = "https://preview.colorkit.co/color/afafaf.png?size=wallpaper&static=true";
-    //     commentImg.alt= "Profile picture"
-    //     commentLi.appendChild(commentImg);  // append the grey profile img to the li
-
-    //     const commentName = document.createElement("h3");
-    //     commentName.classList.add("comment-list__name");
-    //     commentName.innerText = commentSection[i].name;
-    //     commentLi.appendChild(commentName); // append the h3 to the li
-
-    //     const commentTimestamp = document.createElement("p");
-    //     commentTimestamp.classList.add("comment-list__timestamp");
-    //     commentTimestamp.innerText = commentSection[i].timestamp;
-    //     commentLi.appendChild(commentTimestamp); // append the timestamp to the li
-
-    //     const commentContent = document.createElement("p");
-    //     commentContent.classList.add("comment-list__content");
-    //     commentContent.innerText = commentSection[i].content;
-    //     commentLi.appendChild(commentContent); // append the p to the li
-
-
-    //     commentList.appendChild(commentLi); // appending to the ul
-    // }
-
 
     // Submit button
     // commentForm.addEventListener("submit", function(event){
     //     event.preventDefault(); // prevents reloading the page
     //     console.log("comment submitted")
 
+        // const nameInput = commentForm.querySelector(".comments__name-input");
+        // const commentInput = commentForm.querySelector(".comments__comment-input");
 
-//         const nameInput = commentForm.querySelector(".comments__name-input");
-//         const commentInput = commentForm.querySelector(".comments__comment-input");
+        // // clear old error styles
+        // nameInput.classList.remove("error");
+        // commentInput.classList.remove("error");
 
-//         // clear old error styles
-//         nameInput.classList.remove("error");
-//         commentInput.classList.remove("error");
+        // // getting the input values
+        // const nameValidate = nameInput.value.trim();
+        // const commentValidate = commentInput.value.trim();
 
-//         // getting the input values
-//         const nameValidate = nameInput.value.trim();
-//         const commentValidate = commentInput.value.trim();
+        // // validate the inputs 
+        // let hasError = false;
 
-//         // validate the inputs 
-//         let hasError = false;
+        // if (!nameValidate){
+        //     nameInput.classList.add("error");
+        //     hasError = true;
+        // }
+        // if (!commentValidate){
+        //     commentInput.classList.add("error");
+        //     hasError = true;
+        // }
 
-//         if (!nameValidate){
-//             nameInput.classList.add("error");
-//             hasError = true;
-//         }
-//         if (!commentValidate){
-//             commentInput.classList.add("error");
-//             hasError = true;
-//         }
-
-//         if (hasError){
-//             return; // exit the function
-//         }
+        // if (hasError){
+        //     return; // exit the function
+        // }
         
 
-//         const commentName = event.target.name.value;
-//         const commentContent = event.target.comment.value;
-//         console.log(commentName);
-//         console.log(commentContent);
+    //     const commentName = event.target.name.value;
+    //     const commentContent = event.target.comment.value;
+    //     console.log(commentName);
+    //     console.log(commentContent);
 
-        // adding the time stamp
-    //     const timeCommentAdded = Date.now();
-    //     console.log(timeCommentAdded);
-    //     const formattedDateCommentAdded = new Date(timeCommentAdded).toLocaleDateString();
+    //     adding the time stamp
+        // const timeCommentAdded = Date.now();
+        // console.log(timeCommentAdded);
+        // const formattedDateCommentAdded = new Date(timeCommentAdded).toLocaleDateString();
     
     //     console.log(formattedDateCommentAdded);
     
@@ -172,12 +162,12 @@ getCommentDataAndAppendToList();    // runs when the js first loads
     //         timestamp: formattedDateCommentAdded
     //     }
 
-//     //     commentSection.unshift(newComment); // adding the comment to the top of the array
+    //     commentSection.unshift(newComment); // adding the comment to the top of the array
 
-//     //     connectingComments();
+    //     connectingComments();
 
-//     //     event.target.reset(); // clear input values
-//     // })
+    //     event.target.reset(); // clear input values
+    // })
 
 
 // connectingComments();
