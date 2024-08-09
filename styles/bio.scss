@@ -50,8 +50,7 @@
     &__content{
         @include subheader;
         color: $bandSite-black;
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         gap: 1.25rem;
     } 
     &__quote-author{
@@ -282,7 +281,6 @@
         &__form{
             align-items: center;
             margin: -4.375rem 0.625rem 0 5rem;
-            @include body;
         }
         &__name-label, &__comment-label{
             color: $sliver;
@@ -303,7 +301,6 @@
             margin: 0 0 -0.625rem 6.5rem;
         }
         &__btn {
-            @include body;
             width: 20%;
             margin: 0 0 1.25rem 35rem;
         }
@@ -313,7 +310,6 @@
         &__form{
             align-items: center;
             margin-top: -4.375rem;
-            @include body;
             margin-left: 5rem;
             margin-right: .625rem;
         }

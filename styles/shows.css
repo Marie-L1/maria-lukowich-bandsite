@@ -572,22 +572,6 @@ body {
 }
 .hero__album {
   padding: 0 1.5rem 0 1.5rem;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-  font-family: "Avenir Next Regular";
-}
-@media (min-width: 768px) {
-  .hero__album {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
-}
-@media (min-width: 1280px) {
-  .hero__album {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
 }
 .hero__soundcloud {
   max-width: 100vw;
@@ -939,8 +923,8 @@ body {
     content: "";
     position: absolute;
     bottom: 0;
-    left: -500px;
-    right: -500px;
+    left: -31.25rem;
+    right: -31.25rem;
     width: 10%;
   }
   .shows .shows-list__btn {

@@ -89,6 +89,7 @@ async function displayingShows(){
     }
 
     displayingShows();
+    
 // function displayingShows(){
 //     // clear ul html before to avoide duplication of shows
 //     showsList.innerHTML = "";
