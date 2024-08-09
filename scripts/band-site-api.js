@@ -22,7 +22,7 @@ class BandSiteApi {
     async postComments(newComments){
         const endpoint = "comments";
         try{
-            const response = await axios.post(`${this.baseUrl}/${endpoint}?api_key=${this.apiKey}`, newComments)
+            const response = await axios.post(`${this.baseUrl}/${endpoint}?api_key=${this.apiKey}`, newComments);
             return response.data;
         } catch(error){
 
