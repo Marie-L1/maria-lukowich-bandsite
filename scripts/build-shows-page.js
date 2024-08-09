@@ -1,113 +1,164 @@
-import BandSiteApi from "./band-site-api";
-
-// shows array
-// const showsSection = [
-//     {
-//         date: "Mon Sept 09 2024",
-//         venue: "Ronald Lane",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Tue Sept 17 2024",
-//         venue: "Pier 3 East",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Sat Oct 12 2024",
-//         venue: "View Lounge",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Sat Nov 16 2024",
-//         venue: "Hyatt Agency",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Fri Nov 29 2024",
-//         venue: "Moscow Center",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Wed Dec 18 2024",
-//         venue: "Press Club",
-//         location: "San Francisco, CA"
-//     }
-// ]
+import BandSiteApi from "./band-site-api.js";
 
 // loop through the array and append them to empty ul 
 const showsList = document.querySelector(".shows-array");
 
-function displayingShows(){
-    // clear ul html before to avoide duplication of shows
-    showsList.innerHTML = "";
+// creating a variable for the key 
+const api_key = "dffc64ab-d0d2-402e-973e-a6233f0562fd";
+const bandsiteApi = new BandSiteApi(api_key);
 
-     // Create and append the header titles
-     const header = document.createElement("div");
-     header.classList.add("shows-list__header");
- 
-     const dateTitle = document.createElement("h2");
-     dateTitle.innerText = "DATE";
-     header.appendChild(dateTitle);
- 
-     const venueTitle = document.createElement("h2");
-     venueTitle.innerText = "VENUE";
-     header.appendChild(venueTitle);
- 
-     const locationTitle = document.createElement("h2");
-     locationTitle.innerText = "LOCATION";
-     header.appendChild(locationTitle);
- 
-     showsList.appendChild(header);
+const showsData = await bandsiteApi.getShows();
+console.log(showsData);
 
-    for(let i = 0; i < showsSection.length; i++){
-        const showsLi = document.createElement("li");
-        showsLi.classList.add("shows-list__item");
+async function displayingShows(){
+    // fetching data from the API
+    const showsData = await bandsiteApi.getShows()
+        console.log(showsData);
 
-        // Date
+        // clear ul html before to avoide duplication of shows
+        showsList.innerHTML = "";
+
+        // create and append the titles
+        const header = document.createElement("div");
+        header.classList.add("shows-list__header");
+    
         const dateTitle = document.createElement("h2");
-        dateTitle.classList.add("shows-list__title-date");
         dateTitle.innerText = "DATE";
-        showsLi.appendChild(dateTitle); // append date title to the li
-
-        const showsDate = document.createElement("h3");
-        showsDate.classList.add("shows-list__date");
-        showsDate.innerHTML = showsSection[i].date;
-        showsLi.appendChild(showsDate); // append date h3 to the li
-
-
-        // Venue
+        header.appendChild(dateTitle);
+    
         const venueTitle = document.createElement("h2");
-        venueTitle.classList.add("shows-list__title-venue");
         venueTitle.innerText = "VENUE";
-        showsLi.appendChild(venueTitle); // append venue title to the li
-
-        const showsVenue = document.createElement("h3");
-        showsVenue.classList.add("shows-list__venue");
-        showsVenue.innerHTML = showsSection[i].venue;
-        showsLi.appendChild(showsVenue); // append venue h3 to the li
-
-
-        // Location
+        header.appendChild(venueTitle);
+    
         const locationTitle = document.createElement("h2");
-        locationTitle.classList.add("shows-list__title-shows");
         locationTitle.innerText = "LOCATION";
-        showsLi.appendChild(locationTitle); // append location title to the li
+        header.appendChild(locationTitle);
+    
+        showsList.appendChild(header);
 
-        const showsLocation = document.createElement("h3");
-        showsLocation.classList.add("shows-list__location");
-        showsLocation.innerHTML = showsSection[i].location;
-        showsLi.appendChild(showsLocation); // append location h3 to the li
-
-
-        // Button
-        const showsBtn = document.createElement("button");
-        showsBtn.classList.add("shows-list__btn");
-        showsBtn.innerText = "BUY TICKETS";
-        showsLi.appendChild(showsBtn); // appends button to the li
-
-
-        showsList.appendChild(showsLi); // appends to the ul
+        // loop through the shows array returned from the API
+        showsData.forEach((show) => {
+            const showsLi = document.createElement("li");
+            showsLi.classList.add("shows-list__item");
+    
+            // Date
+            const dateTitle = document.createElement("h2");
+            dateTitle.classList.add("shows-list__title-date");
+            dateTitle.innerText = "DATE";
+            showsLi.appendChild(dateTitle); // append date title to the li
+    
+            const showsDate = document.createElement("h3");
+            showsDate.classList.add("shows-list__date");
+            showsDate.innerHTML = show.date;
+            showsLi.appendChild(showsDate); // append date h3 to the li
+    
+    
+            // Venue
+            const venueTitle = document.createElement("h2");
+            venueTitle.classList.add("shows-list__title-venue");
+            venueTitle.innerText = "VENUE";
+            showsLi.appendChild(venueTitle); // append venue title to the li
+    
+            const showsVenue = document.createElement("h3");
+            showsVenue.classList.add("shows-list__venue");
+            showsVenue.innerHTML = show.place;
+            showsLi.appendChild(showsVenue); // append venue h3 to the li
+    
+    
+            // Location
+            const locationTitle = document.createElement("h2");
+            locationTitle.classList.add("shows-list__title-shows");
+            locationTitle.innerText = "LOCATION";
+            showsLi.appendChild(locationTitle); // append location title to the li
+    
+            const showsLocation = document.createElement("h3");
+            showsLocation.classList.add("shows-list__location");
+            showsLocation.innerHTML = show.location;
+            showsLi.appendChild(showsLocation); // append location h3 to the li
+    
+    
+            // Button
+            const showsBtn = document.createElement("button");
+            showsBtn.classList.add("shows-list__btn");
+            showsBtn.innerText = "BUY TICKETS";
+            showsLi.appendChild(showsBtn); // appends button to the li
+    
+    
+            showsList.appendChild(showsLi); // appends to the ul
+        });
     }
 
-};
-displayingShows();
+    displayingShows();
+// function displayingShows(){
+//     // clear ul html before to avoide duplication of shows
+//     showsList.innerHTML = "";
+
+//      // Create and append the header titles
+//      const header = document.createElement("div");
+//      header.classList.add("shows-list__header");
+ 
+//      const dateTitle = document.createElement("h2");
+//      dateTitle.innerText = "DATE";
+//      header.appendChild(dateTitle);
+ 
+//      const venueTitle = document.createElement("h2");
+//      venueTitle.innerText = "VENUE";
+//      header.appendChild(venueTitle);
+ 
+//      const locationTitle = document.createElement("h2");
+//      locationTitle.innerText = "LOCATION";
+//      header.appendChild(locationTitle);
+ 
+//      showsList.appendChild(header);
+
+//     for(let i = 0; i < showsSection.length; i++){
+//         const showsLi = document.createElement("li");
+//         showsLi.classList.add("shows-list__item");
+
+//         // Date
+//         const dateTitle = document.createElement("h2");
+//         dateTitle.classList.add("shows-list__title-date");
+//         dateTitle.innerText = "DATE";
+//         showsLi.appendChild(dateTitle); // append date title to the li
+
+//         const showsDate = document.createElement("h3");
+//         showsDate.classList.add("shows-list__date");
+//         showsDate.innerHTML = showsSection[i].date;
+//         showsLi.appendChild(showsDate); // append date h3 to the li
+
+
+//         // Venue
+//         const venueTitle = document.createElement("h2");
+//         venueTitle.classList.add("shows-list__title-venue");
+//         venueTitle.innerText = "VENUE";
+//         showsLi.appendChild(venueTitle); // append venue title to the li
+
+//         const showsVenue = document.createElement("h3");
+//         showsVenue.classList.add("shows-list__venue");
+//         showsVenue.innerHTML = showsSection[i].venue;
+//         showsLi.appendChild(showsVenue); // append venue h3 to the li
+
+
+//         // Location
+//         const locationTitle = document.createElement("h2");
+//         locationTitle.classList.add("shows-list__title-shows");
+//         locationTitle.innerText = "LOCATION";
+//         showsLi.appendChild(locationTitle); // append location title to the li
+
+//         const showsLocation = document.createElement("h3");
+//         showsLocation.classList.add("shows-list__location");
+//         showsLocation.innerHTML = showsSection[i].location;
+//         showsLi.appendChild(showsLocation); // append location h3 to the li
+
+
+//         // Button
+//         const showsBtn = document.createElement("button");
+//         showsBtn.classList.add("shows-list__btn");
+//         showsBtn.innerText = "BUY TICKETS";
+//         showsLi.appendChild(showsBtn); // appends button to the li
+
+
+//         showsList.appendChild(showsLi); // appends to the ul
+//     }
+
+// };

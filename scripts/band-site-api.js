@@ -31,7 +31,7 @@ class BandSiteApi {
 
     // getShows method
     async getShows(){
-        const endpoint = "shows";
+        const endpoint = "showdates";
         const response = await axios.get(`${this.baseUrl}/${endpoint}?api_key=${this.apiKey}`);
         return response.data;
     }
