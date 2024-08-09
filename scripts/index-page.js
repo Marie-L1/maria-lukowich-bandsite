@@ -71,7 +71,7 @@ commentForm.addEventListener("submit", async (event) => {
 
     const response = await bandsiteApi.postComments(newComment);
     console.log(response);
-    getCommentDataAndAppendToList();  // call function to reload recipes with the latest data
+    getCommentDataAndAppendToList();  // call function to reload comments with the latest data
 
     event.target.reset(); // clear input values
 });
