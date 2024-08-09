@@ -99,9 +99,10 @@ commentForm.addEventListener("submit", async (event) => {
         comment: event.target.comment.value
     }
     console.log(newComment)
-    
+
     const response = await bandsiteApi.postComments(newComment);
     console.log(response);
+
     getCommentDataAndAppendToList();  // call function to reload comments with the latest data
 
     event.target.reset(); // clear input values
