@@ -805,6 +805,8 @@ body {
 @media (min-width: 768px) {
   .shows .shows-array {
     margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
   }
   .shows .shows-list {
     /* style for the elements created in JavaScript */

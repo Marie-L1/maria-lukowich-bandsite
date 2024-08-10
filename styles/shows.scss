@@ -163,6 +163,8 @@
     }
     .shows-array{
         margin-bottom: 2.5rem;
+        @include flex-column;
+        
     }
     .shows-list{
         /* style for the elements created in JavaScript */
