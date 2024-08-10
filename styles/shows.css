@@ -243,23 +243,7 @@ body {
   margin-bottom: 1.875rem;
 }
 .footer__copyright {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-  font-family: "Avenir Next Regular";
   margin-bottom: 1.875rem;
-}
-@media (min-width: 768px) {
-  .footer__copyright {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
-}
-@media (min-width: 1280px) {
-  .footer__copyright {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
 }
 .footer .management, .footer .artist-group, .footer .arch-entertainment {
   margin-bottom: 1rem;
@@ -280,24 +264,6 @@ body {
 @media (min-width: 1280px) {
   .footer .management__title, .footer .artist-group__title, .footer .arch-entertainment__title {
     font-size: 1.5rem;
-    line-height: 1.375rem;
-  }
-}
-.footer .management__address, .footer .management__booking, .footer .management__email, .footer .artist-group__address, .footer .artist-group__booking, .footer .artist-group__email, .footer .arch-entertainment__address, .footer .arch-entertainment__booking, .footer .arch-entertainment__email {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-  font-family: "Avenir Next Regular";
-}
-@media (min-width: 768px) {
-  .footer .management__address, .footer .management__booking, .footer .management__email, .footer .artist-group__address, .footer .artist-group__booking, .footer .artist-group__email, .footer .arch-entertainment__address, .footer .arch-entertainment__booking, .footer .arch-entertainment__email {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
-}
-@media (min-width: 1280px) {
-  .footer .management__address, .footer .management__booking, .footer .management__email, .footer .artist-group__address, .footer .artist-group__booking, .footer .artist-group__email, .footer .arch-entertainment__address, .footer .arch-entertainment__booking, .footer .arch-entertainment__email {
-    font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
@@ -358,26 +324,8 @@ body {
     margin-bottom: 0.8rem;
   }
   .footer__copyright {
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
-    font-weight: 400;
-    font-family: "Avenir Next Regular";
     margin-top: 1.875rem;
   }
-}
-@media (min-width: 768px) and (min-width: 768px) {
-  .footer__copyright {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
-}
-@media (min-width: 768px) and (min-width: 1280px) {
-  .footer__copyright {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
-}
-@media (min-width: 768px) {
   .footer .management__title, .footer .artist-group__title, .footer .arch-entertainment__title {
     font-size: 0.8125rem;
     line-height: 1.125rem;
