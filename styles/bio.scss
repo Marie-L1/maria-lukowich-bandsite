@@ -306,7 +306,7 @@
         }
         &__btn {
             width: 20%;
-            margin: 0 0 1.25rem 35rem;
+            margin: 0 0 1.25rem 33rem;
             @include body;
         }
     }
@@ -362,7 +362,6 @@
     &__item{
         position: relative;
         @include flex-column;
-        margin: 0 1.25rem;
 
         &::before, &::after { 
             content: "";
@@ -408,6 +407,8 @@
     }
     @include tablet{
         &__item{
+            margin: 0 4rem 0 0;
+
             &::before, &::after { 
                 width: 84%; 
             }
@@ -451,7 +452,7 @@
     
         }
         &__content{
-            margin: .625rem 28.75rem 1.25rem 29.0625rem;
+            margin: .625rem 26rem 1.25rem 29.0625rem;
         }
         &__timestamp{
             margin-right: 29.5rem;
