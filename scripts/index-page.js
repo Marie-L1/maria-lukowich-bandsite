@@ -6,7 +6,7 @@ const commentList = document.querySelector(".comment-list");
 const commentForm = document.querySelector(".comments__form");
 
 // creating a variable for the key 
-const api_key = "dffc64ab-d0d2-402e-973e-a6233f0562fd";
+const api_key = "24a4e214-609b-4706-b1a3-8cde85ba0f5f";
 
 // object instance of BandSiteApi
 const bandsiteApi = new BandSiteApi(api_key);

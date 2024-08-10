@@ -4,7 +4,7 @@ import BandSiteApi from "./band-site-api.js";
 const showsList = document.querySelector(".shows-array");
 
 // creating a variable for the key 
-const api_key = "dffc64ab-d0d2-402e-973e-a6233f0562fd";
+const api_key = "24a4e214-609b-4706-b1a3-8cde85ba0f5f";
 const bandsiteApi = new BandSiteApi(api_key);
 
 const showsData = await bandsiteApi.getShows();

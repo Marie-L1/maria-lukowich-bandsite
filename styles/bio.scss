@@ -300,9 +300,14 @@
             border-radius: 50%;
             margin: 0 0 -0.625rem 6.5rem;
         }
+        &__btn-wrapper{
+            display: flex;
+            flex-direction: flex-end;
+        }
         &__btn {
             width: 20%;
             margin: 0 0 1.25rem 35rem;
+            @include body;
         }
     }
     @include desktop{
@@ -357,6 +362,7 @@
     &__item{
         position: relative;
         @include flex-column;
+        margin: 0 1.25rem;
 
         &::before, &::after { 
             content: "";

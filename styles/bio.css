@@ -1185,9 +1185,29 @@ body {
     border-radius: 50%;
     margin: 0 0 -0.625rem 6.5rem;
   }
+  .comments__btn-wrapper {
+    display: flex;
+    flex-direction: flex-end;
+  }
   .comments__btn {
     width: 20%;
     margin: 0 0 1.25rem 35rem;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    font-family: "Avenir Next Regular";
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .comments__btn {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .comments__btn {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 @media (min-width: 1280px) {
@@ -1273,6 +1293,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  margin: 0 1.25rem;
 }
 .comment-list__item::before, .comment-list__item::after {
   content: "";
