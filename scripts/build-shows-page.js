@@ -51,6 +51,10 @@ async function displayingShows(){
             showsDate.classList.add("shows-list__date");
             showsDate.innerHTML = show.date;
             showsLi.appendChild(showsDate); // append date h3 to the li
+
+            // convert date to formatted object
+            const formattedDate = new Date(show.date).toDateString();
+            showsDate.innerText = formattedDate;
     
     
             // Venue

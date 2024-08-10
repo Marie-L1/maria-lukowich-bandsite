@@ -25,20 +25,20 @@ class BandSiteApi {
             const response = await axios.post(`${this.baseUrl}/${endpoint}?api_key=${this.apiKey}`, newComments);
             return response.data;
         } catch(error){
-
+            console.log(error)
         }
     }
 
     // getShows method
     async getShows(){
         const endpoint = "showdates";
-        const response = await axios.get(`${this.baseUrl}/${endpoint}?api_key=${this.apiKey}`);
-        return response.data;
+        try{
+            const response = await axios.get(`${this.baseUrl}/${endpoint}?api_key=${this.apiKey}`);
+            return response.data;
+        } catch(error) {
+            console.log(error)
+        }
     }
-
-    testApi(){
-        console.log("This is a test");
-    }
-}
+};
 
 export default BandSiteApi;
