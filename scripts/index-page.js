@@ -55,9 +55,7 @@ async function getCommentDataAndAppendToList(){
         commentContent.innerText = comment.comment;
         commentLi.appendChild(commentContent); // append the p to the li
 
-
         commentList.appendChild(commentLi); // appending to the ul
-
     })
 }
 
@@ -109,66 +107,3 @@ commentForm.addEventListener("submit", async (event) => {
 });
 
 getCommentDataAndAppendToList();    // runs when the js first loads
-
-
-    // Submit button
-    // commentForm.addEventListener("submit", function(event){
-    //     event.preventDefault(); // prevents reloading the page
-    //     console.log("comment submitted")
-
-        // const nameInput = commentForm.querySelector(".comments__name-input");
-        // const commentInput = commentForm.querySelector(".comments__comment-input");
-
-        // // clear old error styles
-        // nameInput.classList.remove("error");
-        // commentInput.classList.remove("error");
-
-        // // getting the input values
-        // const nameValidate = nameInput.value.trim();
-        // const commentValidate = commentInput.value.trim();
-
-        // // validate the inputs 
-        // let hasError = false;
-
-        // if (!nameValidate){
-        //     nameInput.classList.add("error");
-        //     hasError = true;
-        // }
-        // if (!commentValidate){
-        //     commentInput.classList.add("error");
-        //     hasError = true;
-        // }
-
-        // if (hasError){
-        //     return; // exit the function
-        // }
-        
-
-    //     const commentName = event.target.name.value;
-    //     const commentContent = event.target.comment.value;
-    //     console.log(commentName);
-    //     console.log(commentContent);
-
-    //     adding the time stamp
-        // const timeCommentAdded = Date.now();
-        // console.log(timeCommentAdded);
-        // const formattedDateCommentAdded = new Date(timeCommentAdded).toLocaleDateString();
-    
-    //     console.log(formattedDateCommentAdded);
-    
-    // //     // adding a newComment to the array
-    //     const newComment = {
-    //         name: commentName,
-    //         content: commentContent,
-    //         timestamp: formattedDateCommentAdded
-    //     }
-
-    //     commentSection.unshift(newComment); // adding the comment to the top of the array
-
-    //     connectingComments();
-
-    //     event.target.reset(); // clear input values
-    // })
-
-
-// connectingComments();
